@@ -3,389 +3,858 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0091EA" />
+    <meta name="theme-color" content="#0d9488" />
     <meta
       name="description"
-      content="AsmaraCloudHouse — Cloud VPS eXtreme NVMe, GPU Tesla, dan layanan cloud untuk bisnis."
+      content="ZeixonCloudHouse — Cloud VPS eXtreme NVMe, GPU Tesla, dan layanan cloud untuk bisnis."
     />
-    <title>AsmaraCloudHouse</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <title>
+      ZeixonCloudHouse — Platform Cloud Computing & Hosting Profesional
+    </title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><symbol id="server" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="8" x="2" y="14" rx="2" ry="2"/><line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="6" x2="6.01" y1="6" y2="6"/><line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="6" x2="6.01" y1="18" y2="18"/></symbol><symbol id="shield-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/></symbol><symbol id="check-circle-2" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="10"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m16 9-5.5 5.5L8 12"/></symbol><symbol id="chevron-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol><symbol id="terminal" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19h8"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m4 17 6-6-6-6"/></symbol><symbol id="user" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="7" r="4"/></symbol><symbol id="message-circle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></symbol><symbol id="brain-circuit" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 13a4.5 4.5 0 0 0 3-4"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 18a4 4 0 0 1-1.967-.516"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 13h4"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 18h6a2 2 0 0 1 2 2v1"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8h8"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 8V5a2 2 0 0 1 2-2"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="16" cy="13" r=".5"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="18" cy="3" r=".5"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="20" cy="21" r=".5"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="20" cy="8" r=".5"/></symbol><symbol id="activity" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol><symbol id="globe" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="10"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 12h20"/></symbol><symbol id="database" viewBox="0 0 24 24"><ellipse fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="5" rx="9" ry="3"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 5V19A9 3 0 0 0 21 19V5"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12A9 3 0 0 0 21 12"/></symbol><symbol id="refresh-cw" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 3v5h-5"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 16H3v5"/></symbol><symbol id="layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol><symbol id="hard-drive" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 16h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21.946 12.013H2.054"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 16h.01"/></symbol><symbol id="wrench" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></symbol><symbol id="cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol><symbol id="graduation-cap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 10v6"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol><symbol id="badge-percent" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 9-6 6"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 9h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 15h.01"/></symbol><symbol id="shopping-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 10a4 4 0 0 1-8 0"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.103 6.034h17.794"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></symbol><symbol id="plane" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol><symbol id="shopping-cart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="18" cy="20" r="2"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="8" cy="20" r="2"/></symbol><symbol id="factory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 16h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 16h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 16h.01"/></symbol><symbol id="heart-pulse" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol><symbol id="film" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" x="3" y="3" rx="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 3v18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 7.5h4"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12h18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 16.5h4"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17 3v18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17 7.5h4"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M17 16.5h4"/></symbol><symbol id="landmark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 18v-7"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 18v-7"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M18 18v-7"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 22h18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 18v-7"/></symbol><symbol id="bot" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8V4H8"/><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="12" x="4" y="8" rx="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 14h2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 14h2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 13v2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 13v2"/></symbol><symbol id="laptop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20.054 15.987H3.946"/></symbol><symbol id="handshake" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m11 17 2 2a1 1 0 1 0 3-3"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m21 3 1 11h-2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 4h8"/></symbol><symbol id="heart-handshake" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></symbol><symbol id="calendar-days" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 2v3"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 2v3"/><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="3" y="3" width="18" height="18" rx="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 9h18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 13h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 13h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 13h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 17h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 17h.01"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 17h.01"/></symbol><symbol id="share-2" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="18" cy="5" r="3"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="6" cy="12" r="3"/><circle fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="18" cy="19" r="3"/><line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></symbol><symbol id="book-open" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v16"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></symbol><symbol id="mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="2" y="4" width="20" height="16" rx="2"/></symbol><symbol id="book-marked" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10 2v7.751a.25.25 0 00.407.195l2.28-1.834a.5.5 0 01.627 0l2.28 1.834A.25.25 0 0016 9.751V2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19.5v-15A2.5 2.5 0 016.5 2H19a1 1 0 011 1v18a1 1 0 01-1 1H6.5a1 1 0 010-5H20"/></symbol><symbol id="ticket" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M13 5v2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M13 17v2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M13 11v2"/></symbol><symbol id="credit-card" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="14" x="2" y="5" rx="2"/><line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="2" x2="22" y1="10" y2="10"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 14h2"/></symbol><symbol id="headphones" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol><symbol id="x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M18 6 6 18"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 6 12 12"/></symbol><symbol id="log-in" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m10 17 5-5-5-5"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 12H3"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></symbol><symbol id="menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h16"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 19h16"/></symbol></svg>
-    <a class="skip" href="#konten">Lewati ke konten</a>
+    <!-- SVG Symbols for UI Icons -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <symbol id="server" viewBox="0 0 24 24">
+        <rect
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="20"
+          height="8"
+          x="2"
+          y="2"
+          rx="2"
+          ry="2"
+        />
+        <rect
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          width="20"
+          height="8"
+          x="2"
+          y="14"
+          rx="2"
+          ry="2"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          x1="6"
+          x2="6.01"
+          y1="6"
+          y2="6"
+        />
+        <line
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          x1="6"
+          x2="6.01"
+          y1="18"
+          y2="18"
+        />
+      </symbol>
+      <symbol id="shield-check" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m9 12 2 2 4-4"
+        />
+      </symbol>
+      <symbol id="check-circle-2" viewBox="0 0 24 24">
+        <circle
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m16 9-5.5 5.5L8 12"
+        />
+      </symbol>
+      <symbol id="chevron-down" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m6 9 6 6 6-6"
+        />
+      </symbol>
+      <symbol id="terminal" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 19h8"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4 17 6-6-6-6"
+        />
+      </symbol>
+      <symbol id="user" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+        />
+        <circle
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          cx="12"
+          cy="7"
+          r="4"
+        />
+      </symbol>
+      <symbol id="message-circle" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+        />
+      </symbol>
+      <symbol id="brain-circuit" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 13a4.5 4.5 0 0 0 3-4"
+        />
+        <circle
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          cx="16"
+          cy="13"
+          r=".5"
+        />
+      </symbol>
+      <symbol id="activity" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"
+        />
+      </symbol>
+      <symbol id="globe" viewBox="0 0 24 24">
+        <circle
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2 12h20"
+        />
+      </symbol>
+      <symbol id="database" viewBox="0 0 24 24">
+        <ellipse
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          cx="12"
+          cy="5"
+          rx="9"
+          ry="3"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 5V19A9 3 0 0 0 21 19V5"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 12A9 3 0 0 0 21 12"
+        />
+      </symbol>
+      <symbol id="refresh-cw" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 3v5h-5"
+        />
+      </symbol>
+      <symbol id="layers" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"
+        />
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 5h16"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 12h16"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 19h16"
+        />
+      </symbol>
+      <symbol id="x" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M18 6 6 18"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m6 6 12 12"
+        />
+      </symbol>
+      <symbol id="log-in" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m10 17 5-5-5-5"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 12H3"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"
+        />
+      </symbol>
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          cx="11"
+          cy="11"
+          r="8"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-4.35-4.35"
+        />
+      </symbol>
+    </svg>
 
+    <a class="skip" href="#konten">Lewati ke konten utama</a>
+
+    <!-- Top Bar / Header Navigation -->
     <nav class="navbar" id="navbar">
       <a class="brand" id="brand" href="#top">
         <span class="brand-mark">
-          <svg class="ico ico-blue" aria-hidden="true"><use href="#server"></use></svg>
+          <svg class="ico ico-green" aria-hidden="true">
+            <use href="#server"></use>
+          </svg>
         </span>
-        <span>Asmara<em>CloudHouse</em></span>
+        <span>Zeixon<em>CloudHouse</em></span>
       </a>
 
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
-        <svg class="ico ico-white" aria-hidden="true"><use href="#menu"></use></svg>
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-label="Buka menu"
+        aria-expanded="false"
+      >
+        <svg class="ico ico-white" aria-hidden="true">
+          <use href="#menu"></use>
+        </svg>
       </button>
 
       <div class="nav-panel" id="nav-panel">
         <div class="nav-center">
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" data-menu="mega-produk" aria-expanded="false" aria-controls="mega-produk">
-              Produk
-              <svg class="ico ico-14 ico-white chev" aria-hidden="true"><use href="#chevron-down"></use></svg>
-            </button>
-            <div class="mega" id="mega-produk" data-tabs hidden>
-              <div class="mega-body">
-                <div class="mega-tabs" role="tablist" aria-label="Kategori produk">
-                  <button class="mega-tab is-active" type="button" role="tab" data-tab="featured" aria-selected="true">Featured Products</button>
-                  <button class="mega-tab" type="button" role="tab" data-tab="cloud" aria-selected="false">Cloud &amp; Server</button>
-                  <button class="mega-tab" type="button" role="tab" data-tab="domain" aria-selected="false">Domain &amp; Website</button>
-                  <button class="mega-tab" type="button" role="tab" data-tab="solution" aria-selected="false">Solution &amp; Addons</button>
-                  <button class="mega-tab" type="button" role="tab" data-tab="tools" aria-selected="false">Developer Tools</button>
-                </div>
-                <div class="mega-content">
-                  <div data-panel="featured">
-                    <h3>Featured Products</h3>
-                    <div class="mega-grid">
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#cloud"></use></svg><span><span class="card-title"><span class="card-name">Cloud VPS</span><span class="badge badge-hot">HOT</span></span><p>Server cloud cepat &amp; scalable.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#server"></use></svg><span><span class="card-title"><span class="card-name">Server VPS</span><span class="badge">NVMe</span></span><p>VPS terjangkau untuk website bisnis.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#server"></use></svg><span><span class="card-title"><span class="card-name">Colocation Server</span><span class="badge">Tier IV</span></span><p>Tempatkan server Anda di data center premium.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#globe"></use></svg><span><span class="card-title"><span class="card-name">WordPress Hosting</span></span><p>Hosting khusus WordPress siap pakai.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#server"></use></svg><span><span class="card-title"><span class="card-name">Dedicated Server</span><span class="badge">Tier IV</span></span><p>Server khusus full control untuk beban tinggi.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#layers"></use></svg><span><span class="card-title"><span class="card-name">VPS WHM cPanel</span></span><p>VPS dengan WHM cPanel untuk kelola hosting.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#shield-check"></use></svg><span><span class="card-title"><span class="card-name">Cyber Security Service</span></span><p>Proteksi keamanan siber untuk infrastruktur.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-green" aria-hidden="true"><use href="#brain-circuit"></use></svg><span><span class="card-title"><span class="card-name">GPU Tesla AI Server</span><span class="badge badge-new">NEW</span></span><p>Server akselerator AI &amp; Deep Learning.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#refresh-cw"></use></svg><span><span class="card-title"><span class="card-name">Backup as a Service</span></span><p>Cadangan data aman dan fleksibel untuk bisnis Anda.</p></span></button>
-                    </div>
-                  </div>
-                  <div data-panel="cloud" hidden>
-                    <h3>Cloud Products</h3>
-                    <div class="mega-grid">
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#cloud"></use></svg><span><span class="card-title"><span class="card-name">Cloud VPS eXtreme</span><span class="badge">NVMe</span></span><p>Performa tinggi untuk database &amp; beban komputasi.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-green" aria-hidden="true"><use href="#brain-circuit"></use></svg><span><span class="card-title"><span class="card-name">GPU Tesla V100/A100</span><span class="badge badge-hot">HOT</span></span><p>Akselerasi LLM, PyTorch &amp; Machine Learning.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#server"></use></svg><span><span class="card-title"><span class="card-name">Dedicated Bare Metal</span></span><p>Akses root penuh ke hardware fisik tanpa virtualisasi.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#layers"></use></svg><span><span class="card-title"><span class="card-name">Kubernetes Cluster</span></span><p>Orkestrasi container otomatis skala enterprise.</p></span></button>
-                    </div>
-                  </div>
-                  <div data-panel="domain" hidden>
-                    <h3>Domain Products</h3>
-                    <div class="mega-grid">
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#globe"></use></svg><span><span class="card-title"><span class="card-name">Registrasi Domain</span></span><p>Beli domain .id, .com, .net dengan instan.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#refresh-cw"></use></svg><span><span class="card-title"><span class="card-name">Transfer Domain</span></span><p>Pindahkan domain Anda ke AsmaraCloudHouse.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#shield-check"></use></svg><span><span class="card-title"><span class="card-name">SSL Certificate</span></span><p>Enkripsi data HTTPS untuk keamanan website.</p></span></button>
-                    </div>
-                  </div>
-                  <div data-panel="solution" hidden>
-                    <h3>Solution Products</h3>
-                    <div class="mega-grid">
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#shield-check"></use></svg><span><span class="card-title"><span class="card-name">Anti DDoS Protection</span><span class="badge">L7 Guard</span></span><p>Mitigasi serangan DDoS volume tinggi.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#database"></use></svg><span><span class="card-title"><span class="card-name">Managed Database</span></span><p>MySQL, PostgreSQL, dan MongoDB otomatis kelola.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#hard-drive"></use></svg><span><span class="card-title"><span class="card-name">Object Storage S3</span></span><p>Penyimpanan berkas media tak terbatas.</p></span></button>
-                    </div>
-                  </div>
-                  <div data-panel="tools" hidden>
-                    <h3>Tools Products</h3>
-                    <div class="mega-grid">
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#terminal"></use></svg><span><span class="card-title"><span class="card-name">Developer API Console</span></span><p>REST API untuk otomatisasi provisioning instance.</p></span></button>
-                      <button class="mega-card" type="button"><svg class="ico ico-blue" aria-hidden="true"><use href="#wrench"></use></svg><span><span class="card-title"><span class="card-name">One-Click Installer</span></span><p>Deploy WordPress, Docker, Node.js dalam 60 detik.</p></span></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mega-banner">
-                <div class="mega-banner-copy">
-                  <strong>Request Penawaran</strong>
-                  <p>Anda butuh spesifikasi server custom untuk kebutuhan bisnis Anda? Silakan ajukan formulir Request Penawaran server custom yang akan dibantu oleh tim AsmaraCloudHouse.</p>
-                </div>
-                <button class="banner-btn" type="button">Selengkapnya</button>
-              </div>
-            </div>
-          </div>
-
-          <a class="nav-link" href="#kalkulator-vps">Harga</a>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" data-menu="mega-solusi" aria-expanded="false" aria-controls="mega-solusi">
-              Solusi
-              <svg class="ico ico-14 ico-white chev" aria-hidden="true"><use href="#chevron-down"></use></svg>
-            </button>
-            <div class="mega" id="mega-solusi" data-tabs hidden>
-              <div class="mega-body tall">
-                <div class="mega-tabs wide" role="tablist" aria-label="Kategori solusi">
-                  <button class="mega-tab is-active" type="button" role="tab" data-tab="industry" aria-selected="true">Solution by Industry</button>
-                  <button class="mega-tab" type="button" role="tab" data-tab="apps" aria-selected="false">Solution by Apps</button>
-                </div>
-                <div class="mega-content">
-                  <div data-panel="industry">
-                    <div class="mega-head"><h3>Solution by Industry</h3><button class="more-link" type="button">Selengkapnya</button></div>
-                    <div class="mega-grid">
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#graduation-cap"></use></svg><span><h4>Education</h4><p>Menyediakan teknologi terbaru untuk mendukung pembelajaran digital yang efektif dan inovatif.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#badge-percent"></use></svg><span><h4>Finance</h4><p>Mengelola finansial company Anda dengan solusi layanan yang aman dan terpercaya.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#shopping-bag"></use></svg><span><h4>Retail</h4><p>Meningkatkan bisnis retail Anda menjadi lebih efisien dengan kinerja yang maksimal.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#plane"></use></svg><span><h4>Tour &amp; Travel</h4><p>Menawarkan sistem terdepan dengan teknologi canggih untuk bisnis tour dan travel Anda.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#shopping-cart"></use></svg><span><h4>e-Commerce</h4><p>Mengoptimalkan pertumbuhan bisnis E-Commerce Anda dengan aman dan scalable.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#factory"></use></svg><span><h4>Manufacturing &amp; Distribution</h4><p>Meningkatkan produktivitas bisnis manufaktur dan distribusi Anda menjadi lebih optimal.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#heart-pulse"></use></svg><span><h4>Medical &amp; Healthcare</h4><p>Memberikan layanan solusi yang inovatif untuk mendukung efisiensi pelayanan dan kualitas kesehatan lebih baik.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#film"></use></svg><span><h4>Media</h4><p>Mendukung kebutuhan pada industri media Anda dengan kecepatan dan skalabilitas tanpa batas.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#landmark"></use></svg><span><h4>Government</h4><p>Solusi infrastruktur digital yang andal untuk pemerintahan.</p></span></button>
-                    </div>
-                  </div>
-                  <div data-panel="apps" hidden>
-                    <div class="mega-head"><h3>Solution by Apps</h3><button class="more-link" type="button">Selengkapnya</button></div>
-                    <div class="mega-grid">
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-green" aria-hidden="true"><use href="#bot"></use></svg><span><h4>AI Research &amp; LLM</h4><p>Kluster GPU Tesla untuk inferensi kecerdasan buatan, computer vision, dan automasi.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#database"></use></svg><span><h4>High-Traffic Database</h4><p>Solusi kluster database dengan latency ultra rendah berbasis solid state NVMe murni.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#laptop"></use></svg><span><h4>Corporate Remote ERP</h4><p>Infrastruktur privat untuk aplikasi SAP, Odoo, dan sistem akuntansi terpusat.</p></span></button>
-                      <button class="mega-card roomy" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#shield-check"></use></svg><span><h4>Secure Fintech Sandbox</h4><p>Lingkungan komputasi terisolasi dengan compliance standar keamanan data tinggi.</p></span></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mega-banner pad">
-                <div class="mega-banner-copy">
-                  <strong>Customer</strong>
-                  <p>Solusi layanan terbaik untuk Anda! Bersama AsmaraCloudHouse, temukan solusi yang tepat untuk mengembangkan bisnis Anda dalam berbagai bidang yang berbeda. Mari simak testimoni dari para pelanggan unggulan kami!</p>
-                </div>
-                <button class="banner-btn" type="button">Selengkapnya</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" data-menu="mega-program" aria-expanded="false" aria-controls="mega-program">
-              Program
-              <svg class="ico ico-14 ico-white chev" aria-hidden="true"><use href="#chevron-down"></use></svg>
-            </button>
-            <div class="mega" id="mega-program" hidden>
-              <div class="mega-content pad">
-                <h3>Program</h3>
-                <div class="mega-grid loose">
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#share-2"></use></svg><span><h4>Affiliate</h4><p>Dapatkan komisi hingga 45% dari referensi penjualan Anda di AsmaraCloudHouse.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#calendar-days"></use></svg><span><h4>Event &amp; Program</h4><p>Ikuti Keseruan Berbagai Event Online &amp; Offline Gratis dari AsmaraCloudHouse.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#handshake"></use></svg><span><h4>Partnership</h4><p>Perluas bisnis dan project Anda dengan Kemitraan AsmaraCloudHouse.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#graduation-cap"></use></svg><span><h4>Program Ekabima</h4><p>Program Sosial untuk Mendigitalisasikan Sekolah-sekolah di Seluruh Indonesia.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#heart-handshake"></use></svg><span><h4>Program NGO Go Digital</h4><p>Program Mendigitalisasikan NGO / Yayasan / Komunitas yang bermanfaat di Indonesia.</p></span></button>
-                </div>
-              </div>
-              <div class="mega-banner pad">
-                <div class="mega-banner-copy">
-                  <strong>Partnership &amp; Program</strong>
-                  <p>AsmaraCloudHouse sangat yakin bahwa kolaborasi dapat membantu bisnis bisa berlari makin kencang. Ayo berkolaborasi dengan AsmaraCloudHouse!</p>
-                </div>
-                <button class="banner-btn" type="button">Selengkapnya</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="nav-item">
-            <button class="nav-trigger" type="button" data-menu="mega-bantuan" aria-expanded="false" aria-controls="mega-bantuan">
-              Bantuan
-              <svg class="ico ico-14 ico-white chev" aria-hidden="true"><use href="#chevron-down"></use></svg>
-            </button>
-            <div class="mega" id="mega-bantuan" hidden>
-              <div class="mega-content pad">
-                <h3>Bantuan</h3>
-                <div class="mega-grid loose">
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#book-open"></use></svg><span><h4>Panduan</h4><p>Kumpulan tutorial praktis dan langkah demi langkah.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#mail"></use></svg><span><h4>Blog</h4><p>Artikel terbaru seputar hosting, cloud, dan keamanan digital.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#book-marked"></use></svg><span><h4>Kamus Hosting</h4><p>Istilah penting hosting dijelaskan dengan mudah dan cepat.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#ticket"></use></svg><span><h4>Tiket</h4><p>Ajukan dan pantau tiket dukungan langsung dari customer service.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#credit-card"></use></svg><span><h4>Pembayaran</h4><p>Informasi cara bayar dan metode pembayaran yang tersedia.</p></span></button>
-                  <button class="mega-card panel" type="button"><svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#headphones"></use></svg><span><h4>Kontak</h4><p>Hubungi tim support bila butuh bantuan cepat dan personal.</p></span></button>
-                </div>
-              </div>
-              <div class="mega-banner pad">
-                <div class="mega-banner-copy">
-                  <strong>Bantuan CS 24/7</strong>
-                  <p>Tim Support dan Customer Service AsmaraCloudHouse bekerja setiap hari untuk memberikan layanan terbaik untuk kebutuhan Website Anda.</p>
-                </div>
-                <button class="banner-btn dark" type="button">Tentang Perusahaan</button>
-              </div>
-            </div>
-          </div>
-
-          <span class="nav-link">Promo</span>
+          <a class="nav-link" href="#domain-section">Domain</a>
+          <a class="nav-link" href="#hosting-section">Hosting</a>
+          <a class="nav-link" href="#vps-section">VPS Lite</a>
+          <a class="nav-link" href="#colocation-section">Colocation</a>
+          <a class="nav-link" href="#baremetal-section">Bare Metal</a>
+          <a class="nav-link" href="#pricing-section">Server &amp; Harga</a>
+          <a class="nav-link" href="#contact-section">Contact</a>
         </div>
 
         <div class="nav-actions">
-          <button class="lang-btn" type="button" aria-label="Bahasa Indonesia">
-            <span aria-hidden="true">🇮🇩</span>
-            <svg class="ico ico-14 ico-white" aria-hidden="true"><use href="#chevron-down"></use></svg>
-          </button>
           <div class="login-wrap" id="login-wrap">
-            <button class="login-btn" id="login-btn" type="button" aria-expanded="false" aria-controls="login-menu">
-              LOGIN
-              <svg class="ico ico-14 ico-white chev" aria-hidden="true"><use href="#chevron-down"></use></svg>
+            <button
+              class="login-btn"
+              id="login-btn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="login-menu"
+            >
+              LOGIN CLIENT AREA
+              <svg class="ico ico-14 ico-white chev" aria-hidden="true">
+                <use href="#chevron-down"></use>
+              </svg>
             </button>
             <div class="login-menu" id="login-menu" hidden>
-              <p class="login-label">PORTAL ASMARACLOUD</p>
-              <button class="login-item is-muted" type="button">
-                <svg class="ico ico-16 ico-blue" aria-hidden="true"><use href="#terminal"></use></svg>
-                Console Platform
+              <p class="login-label">PORTAL CLOUD PANEL</p>
+              <button
+                class="login-item is-muted"
+                type="button"
+                data-open-client
+              >
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#terminal"></use>
+                </svg>
+                OpenNebula Node.js Console
               </button>
               <button class="login-item" type="button" data-open-client>
-                <svg class="ico ico-16 ico-teal" aria-hidden="true"><use href="#user"></use></svg>
-                Client Area
+                <svg class="ico ico-16 ico-teal" aria-hidden="true">
+                  <use href="#user"></use>
+                </svg>
+                Client Area Dashboard
               </button>
             </div>
           </div>
+          <button
+            class="btn btn-green register-trigger"
+            type="button"
+            data-open-client
+          >
+            Register
+          </button>
         </div>
       </div>
     </nav>
 
+    <!-- Main Content -->
     <main id="konten">
+      <!-- Hero Section -->
       <section class="hero" id="top">
         <div class="hero-copy">
-          <span class="pill">⚡ Performa Cepat dan Stabil</span>
-          <h1>Cloud VPS eXtreme dengan Teknologi NVMe</h1>
-          <p class="hero-lead">Dengan teknologi NVMe, Cloud VPS eXtreme menghadirkan performa lebih cepat, efisien dan stabil dengan berbagai keunggulan:</p>
+          <span class="pill">⚡ Didukung Backend WHM &amp; OpenNebula API</span>
+          <h1>Cloud Provider &amp; Server Handal Berbasis NVMe eXtreme</h1>
+          <p class="hero-lead">
+            Solusi infrastruktur cloud computing, VPS, shared hosting
+            berkapasitas tinggi, dan bare metal dengan jaminan uptime 99.9% dan
+            dukungan teknis 24/7.
+          </p>
+          <div class="hero-cta-group">
+            <a class="btn btn-green" href="#vps-section">Pilih Cloud VPS</a>
+            <a class="btn btn-outline-white" href="#domain-section"
+              >Cek Domain</a
+            >
+          </div>
           <ul class="checks">
-            <li><svg class="ico ico-18 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Performa hingga 6 kali lebih cepat dari Gen sebelumnya</li>
-            <li><svg class="ico ico-18 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Dukungan S3 kompatibel Object Storage</li>
-            <li><svg class="ico ico-18 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Pembayaran fleksibel sesuai kebutuhan</li>
-            <li><svg class="ico ico-18 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Dilengkapi Managed Database &amp; Apps Katalog</li>
-            <li><svg class="ico ico-18 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Unlimited Bandwidth Premium &amp; Tanpa Kuota</li>
+            <li>
+              <svg class="ico ico-18 ico-green" aria-hidden="true">
+                <use href="#check-circle-2"></use>
+              </svg>
+              Integrasi WHM &amp; cPanel Otomatis
+            </li>
+            <li>
+              <svg class="ico ico-18 ico-green" aria-hidden="true">
+                <use href="#check-circle-2"></use>
+              </svg>
+              Manajemen VPS via OpenNebula API
+            </li>
+            <li>
+              <svg class="ico ico-18 ico-green" aria-hidden="true">
+                <use href="#check-circle-2"></use>
+              </svg>
+              Pendaftaran Domain Instant via RackH Reseller API
+            </li>
           </ul>
-          <button class="btn btn-green" type="button">Selengkapnya</button>
         </div>
         <div class="rack-wrap" aria-hidden="true">
           <div class="rack">
             <div class="rack-top">
-              ASMARA-DC01
-              <svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#activity"></use></svg>
+              CLOUD-NODE-01
+              <svg class="ico ico-16 ico-green" aria-hidden="true">
+                <use href="#activity"></use>
+              </svg>
             </div>
-            <div class="blade"><div><strong>Blade Slot 01</strong><span>10Gbps • NVMe Active</span></div><i class="dot"></i></div>
-            <div class="blade"><div><strong>Blade Slot 02</strong><span>10Gbps • NVMe Active</span></div><i class="dot"></i></div>
-            <div class="blade"><div><strong>Blade Slot 03</strong><span>10Gbps • NVMe Active</span></div><i class="dot"></i></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="feature">
-        <div class="feature-visual">
-          <div class="console-wrap">
-            <div class="console">
-              <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
-              <div class="console-label">Choose Package</div>
-              <div class="pkg-row">
-                <span class="pkg">Intel eXtreme</span>
-                <span class="pkg is-on">AMD eXtreme</span>
+            <div class="blade">
+              <div>
+                <strong>Cloud VPS &amp; VPS Lite</strong
+                ><span>OpenNebula KVM • NVMe</span>
               </div>
-              <div class="console-price">Rp 149.000 <span>/bln</span></div>
+              <i class="dot"></i>
+            </div>
+            <div class="blade">
+              <div>
+                <strong>Shared &amp; Cloud Hosting</strong
+                ><span>WHM cPanel Managed</span>
+              </div>
+              <i class="dot"></i>
+            </div>
+            <div class="blade">
+              <div>
+                <strong>Colocation &amp; Bare Metal</strong
+                ><span>Tier IV Data Center</span>
+              </div>
+              <i class="dot"></i>
+            </div>
+            <div class="blade coming-soon-blade">
+              <div><strong>Website Instan</strong><span>Coming Soon</span></div>
+              <span class="badge badge-new">SOON</span>
             </div>
           </div>
         </div>
-        <div class="feature-copy">
-          <h2>Cloud VPS eXtreme</h2>
-          <p><strong>Cloud VPS eXtreme (NVMe)</strong> menawarkan kecepatan dan stabilitas terbaik, dilengkapi IOPS yang tinggi, high performance processor, dan dedicated resource. Dengan arsitektur CPU scalable dari Intel, AMD serta storage NVMe, layanan ini memberikan Powerful Performance yang efisien untuk kebutuhan bisnis Anda.</p>
-          <a class="btn btn-blue" href="#kalkulator-vps">Deploy Sekarang</a>
-        </div>
       </section>
 
-      <section class="gpu">
+      <!-- Section Domain Search -->
+      <section class="domain-search-section" id="domain-section">
         <div class="section-head">
-          <span class="tag">NVIDIA TESLA AI WORKLOAD</span>
-          <h2>Infrastruktur Komputasi GPU Tesla untuk AI &amp; Deep Learning</h2>
-          <p>Akselerasikan training model, fine-tuning LLM, inferensi real-time, dan render grafis 3D menggunakan GPU NVIDIA Tesla berstandar enterprise langsung dari private data center kami.</p>
+          <span class="tag">DOMAIN REGISTRATION &amp; TRANSFER</span>
+          <h2>Cari Nama Domain Impian Anda</h2>
+          <p>
+            Amankan identitas digital Anda sekarang dengan ekstensi domain
+            populer bergaransi resmi.
+          </p>
         </div>
-        <div class="gpu-grid">
-          <article class="gpu-card">
-            <div>
-              <div class="gpu-kicker"><svg class="ico ico-18 ico-blue" aria-hidden="true"><use href="#brain-circuit"></use></svg> AI DEDICATED</div>
-              <h3>AI Inference Starter</h3>
-              <div class="gpu-name">NVIDIA Tesla T4 (16GB GDDR6)</div>
-              <div class="gpu-price">Rp 1.450.000 <span>/bln</span></div>
-              <ul class="gpu-specs">
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> 320 Turing Tensor Cores, 2560 CUDA</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> RAM Host: 32 GB ECC DDR4</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Disk: 250 GB NVMe Gen4</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Inferensi LLM Cepat, Computer Vision API, PyTorch</li>
-              </ul>
+        <div class="domain-box">
+          <form class="domain-form" id="domain-form">
+            <div class="domain-input-wrap">
+              <svg class="ico ico-20 ico-teal" aria-hidden="true">
+                <use href="#search"></use>
+              </svg>
+              <input
+                type="text"
+                id="domain-query"
+                placeholder="Contoh: tokobinisku.com atau startupcloud.id"
+                required
+              />
             </div>
-            <button class="btn btn-teal" type="button">Deploy AI Instance</button>
-          </article>
-          <article class="gpu-card">
-            <div>
-              <div class="gpu-kicker"><svg class="ico ico-18 ico-blue" aria-hidden="true"><use href="#brain-circuit"></use></svg> AI DEDICATED</div>
-              <h3>Deep Learning Workstation</h3>
-              <div class="gpu-name">NVIDIA Tesla V100 (32GB HBM2)</div>
-              <div class="gpu-price">Rp 3.850.000 <span>/bln</span></div>
-              <ul class="gpu-specs">
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> 640 Tensor Cores, 5120 CUDA</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> RAM Host: 64 GB ECC DDR4</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Disk: 500 GB NVMe Gen4</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Fine-Tuning Llama, Model Training, Stable Diffusion</li>
-              </ul>
+            <button class="btn btn-green-main" type="submit">Cek Domain</button>
+          </form>
+          <div class="domain-result" id="domain-result" hidden>
+            <div class="domain-status-card" id="domain-status-box">
+              <span id="domain-status-text">Domain tersedia!</span>
+              <strong id="domain-name-display">namadomain.com</strong>
+              <span class="domain-price-tag" id="domain-price-display"
+                >Rp 145.000 /tahun</span
+              >
+              <button class="btn btn-green" type="button" data-open-client>
+                Beli Domain Sekarang
+              </button>
             </div>
-            <button class="btn btn-teal" type="button">Deploy AI Instance</button>
-          </article>
-          <article class="gpu-card">
-            <div>
-              <div class="gpu-kicker"><svg class="ico ico-18 ico-blue" aria-hidden="true"><use href="#brain-circuit"></use></svg> AI DEDICATED</div>
-              <h3>High-Density Cluster</h3>
-              <div class="gpu-name">NVIDIA A100 / Dual Tesla V100</div>
-              <div class="gpu-price">Rp 7.900.000 <span>/bln</span></div>
-              <ul class="gpu-specs">
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> 3rd Gen Tensor Cores + NVLink</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> RAM Host: 128 GB ECC DDR4</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Disk: 1 TB Ultra NVMe Gen4</li>
-                <li><svg class="ico ico-16 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Training Foundation Model &amp; HPC Skala Besar</li>
-              </ul>
+          </div>
+          <div class="tld-list">
+            <div class="tld-item">
+              <span>.com</span><strong>Rp 145.000</strong><small>/thn</small>
             </div>
-            <button class="btn btn-teal" type="button">Deploy AI Instance</button>
-          </article>
+            <div class="tld-item">
+              <span>.id</span><strong>Rp 225.000</strong><small>/thn</small>
+            </div>
+            <div class="tld-item">
+              <span>.co.id</span><strong>Rp 275.000</strong><small>/thn</small>
+            </div>
+            <div class="tld-item">
+              <span>.net</span><strong>Rp 160.000</strong><small>/thn</small>
+            </div>
+          </div>
+          <div class="domain-transfer-note">
+            <svg class="ico ico-16 ico-teal" aria-hidden="true">
+              <use href="#refresh-cw"></use>
+            </svg>
+            <span
+              >Punya domain di tempat lain?
+              <button class="text-btn" data-open-client type="button">
+                Transfer domain &amp; SSL di sini
+              </button>
+              dengan proses migrasi gratis dibantu tim support.</span
+            >
+          </div>
         </div>
       </section>
 
-      <section class="calc" id="kalkulator-vps">
-        <h2>Harga Layanan Cloud VPS AsmaraCloudHouse</h2>
-        <p>Tentukan harga yang fleksibel sesuai spesifikasi dan kebutuhan bisnis Anda.</p>
-        <div class="calc-card">
-          <div class="sliders">
-            <div>
-              <div class="slider-top"><span>CPU</span><span class="cpu" id="cpu-label">2 Core</span></div>
-              <input id="cpu" type="range" min="1" max="16" value="2" aria-label="Jumlah CPU" />
+      <!-- Section Pricing & Paket Hosting / VPS -->
+      <section class="pricing-section" id="pricing-section">
+        <div class="section-head">
+          <h2>Paket Hosting, Cloud Hosting &amp; VPS Lite Profesional</h2>
+          <p>
+            Pilihan paket komputasi dengan performa tinggi didukung kontrol WHM
+            cPanel dan resource fleksibel.
+          </p>
+        </div>
+
+        <div class="pricing-grid" id="hosting-section">
+          <!-- Card 1: Shared / Cloud Hosting -->
+          <article class="price-card">
+            <div class="price-header">
+              <span class="badge">WHCPANEL READY</span>
+              <h3>Cloud Hosting Lite</h3>
+              <p>Ideal untuk blog personal, UMKM, dan company profile.</p>
             </div>
-            <div>
-              <div class="slider-top"><span>RAM</span><span class="ram" id="ram-label">2 GB</span></div>
-              <input id="ram" type="range" min="1" max="32" value="2" aria-label="Kapasitas RAM" />
+            <div class="price-tag">Rp 25.000 <span>/bulan</span></div>
+            <ul class="price-features">
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                10 GB NVMe Storage
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                Unlimited Bandwidth
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                Free SSL Let's Encrypt
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                WHM / cPanel Control Panel
+              </li>
+            </ul>
+            <button class="btn btn-outline" data-open-client type="button">
+              Pesan Sekarang
+            </button>
+          </article>
+
+          <!-- Card 2: Cloud VPS eXtreme (Featured) -->
+          <article class="price-card is-featured" id="vps-section">
+            <div class="ribbon"><span>POPULER</span></div>
+            <div class="price-header">
+              <span class="badge badge-hot">OPENNEBULA API</span>
+              <h3>Cloud VPS eXtreme</h3>
+              <p>Performa maksimal untuk aplikasi web berat &amp; database.</p>
             </div>
-            <div>
-              <div class="slider-top"><span>Storage</span><span class="storage" id="storage-label">20 GB</span></div>
-              <input id="storage" type="range" min="20" max="500" step="10" value="20" aria-label="Kapasitas storage" />
+            <div class="price-tag">Rp 96.000 <span>/bulan</span></div>
+            <ul class="price-features">
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                2 vCPU Core Processor
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                2 GB RAM ECC DDR4
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                20 GB Ultra NVMe Storage
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                Full Root Access + API
+              </li>
+            </ul>
+            <button class="btn btn-green-main" data-open-client type="button">
+              Pesan Sekarang
+            </button>
+          </article>
+
+          <!-- Card 3: Colocation & Bare Metal -->
+          <article class="price-card" id="colocation-section">
+            <div class="price-header">
+              <span class="badge">TIER IV DC</span>
+              <h3>Colocation &amp; Bare Metal</h3>
+              <p>Infrastruktur server fisik khusus enterprise.</p>
+            </div>
+            <div class="price-tag" id="baremetal-section">
+              Rp 1.250.000 <span>/bulan</span>
+            </div>
+            <ul class="price-features">
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                Dedicated Server Hardware
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                1Gbps Uplink International
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                Colocation Rack Unit U-Space
+              </li>
+              <li>
+                <svg class="ico ico-16 ico-green" aria-hidden="true">
+                  <use href="#check-circle-2"></use>
+                </svg>
+                Free Anti-DDoS Protection
+              </li>
+            </ul>
+            <button class="btn btn-outline" data-open-client type="button">
+              Pesan Sekarang
+            </button>
+          </article>
+        </div>
+
+        <!-- Kalkulator / Simulasi VPS Custom -->
+        <div class="calc" id="kalkulator-vps">
+          <h2>Simulasi &amp; Kalkulator Kustom Cloud VPS</h2>
+          <p>
+            Tentukan spesifikasi CPU, RAM, dan Storage sesuai kebutuhan beban
+            kerja Anda.
+          </p>
+          <div class="calc-card">
+            <div class="sliders">
+              <div>
+                <div class="slider-top">
+                  <span>CPU Cores</span
+                  ><span class="cpu" id="cpu-label">2 Core</span>
+                </div>
+                <input
+                  id="cpu"
+                  type="range"
+                  min="1"
+                  max="16"
+                  value="2"
+                  aria-label="Jumlah CPU"
+                />
+              </div>
+              <div>
+                <div class="slider-top">
+                  <span>RAM Memory</span
+                  ><span class="ram" id="ram-label">2 GB</span>
+                </div>
+                <input
+                  id="ram"
+                  type="range"
+                  min="1"
+                  max="32"
+                  value="2"
+                  aria-label="Kapasitas RAM"
+                />
+              </div>
+              <div>
+                <div class="slider-top">
+                  <span>NVMe Storage</span
+                  ><span class="storage" id="storage-label">20 GB</span>
+                </div>
+                <input
+                  id="storage"
+                  type="range"
+                  min="20"
+                  max="500"
+                  step="10"
+                  value="20"
+                  aria-label="Kapasitas storage"
+                />
+              </div>
+            </div>
+            <div class="estimate">
+              <div class="estimate-label">Estimasi Tagihan</div>
+              <div class="estimate-month">
+                <span id="month-price">Rp 96.000</span>
+                <span class="per">/Bulan</span>
+              </div>
+              <div class="estimate-hour" id="hour-price">Rp 133 /Jam</div>
+              <button class="btn btn-green-main" data-open-client type="button">
+                PROVISION INSTANCE
+              </button>
             </div>
           </div>
-          <div class="estimate">
-            <div class="estimate-label">Estimasi Tagihan</div>
-            <div class="estimate-month"><span id="month-price">Rp 96.000</span> <span class="per">/Bln</span></div>
-            <div class="estimate-hour" id="hour-price">Rp 133 /Jam</div>
-            <button class="btn btn-blue" type="button">DEPLOY NOW</button>
+        </div>
+      </section>
+
+      <section class="contact-strip" id="contact-section">
+        <div class="contact-inner">
+          <div>
+            <h3>Butuh Bantuan Arsitektur Cloud atau Penawaran Custom?</h3>
+            <p>
+              Tim engineer kami siap membantu merancang topologi server yang
+              handal untuk bisnis Anda.
+            </p>
           </div>
+          <button class="btn btn-green" data-open-client type="button">
+            Hubungi Tim Support
+          </button>
         </div>
       </section>
     </main>
 
-    <button class="chat-btn" type="button" data-open-client title="Buka Client Area" aria-label="Buka Client Area">
-      <svg class="ico ico-26 ico-white" aria-hidden="true"><use href="#message-circle"></use></svg>
+    <!-- Floating Action Button -->
+    <button
+      class="chat-btn"
+      type="button"
+      data-open-client
+      title="Buka Client Area"
+      aria-label="Buka Client Area"
+    >
+      <svg class="ico ico-26 ico-white" aria-hidden="true">
+        <use href="#message-circle"></use>
+      </svg>
     </button>
 
+    <!-- Client Area & Provisioning Modal View -->
     <div class="client" id="client" hidden>
       <header class="client-header">
         <div class="client-header-inner">
           <a class="brand" href="#top">
             <span class="brand-mark">
-              <svg class="ico ico-blue" aria-hidden="true"><use href="#server"></use></svg>
+              <svg class="ico ico-green" aria-hidden="true">
+                <use href="#server"></use>
+              </svg>
             </span>
-            <span>Asmara<em>CloudHouse</em></span>
+            <span>Zeixon<em>CloudHouse</em></span>
           </a>
           <button class="back-btn" id="client-close" type="button">
-            <svg class="ico ico-17 ico-white" aria-hidden="true"><use href="#x"></use></svg>
-            Kembali
+            <svg class="ico ico-17 ico-white" aria-hidden="true">
+              <use href="#x"></use>
+            </svg>
+            Kembali ke Landing Page
           </button>
         </div>
       </header>
 
+      <!-- Portal View -->
       <div class="client-view" id="client-portal">
         <section class="client-hero">
           <div class="orb orb-a" aria-hidden="true"></div>
@@ -393,27 +862,52 @@
           <div class="client-hero-grid">
             <div class="client-hero-copy">
               <div class="eyebrow">
-                <svg class="ico ico-14 ico-white" aria-hidden="true"><use href="#user"></use></svg>
-                PORTAL PELANGGAN
+                <svg class="ico ico-14 ico-white" aria-hidden="true">
+                  <use href="#user"></use>
+                </svg>
+                PORTAL PELANGGAN &amp; OPENNEBULA CLOUD
               </div>
-              <h1>Semua layanan Anda,<br />dalam satu <span>Client Area.</span></h1>
-              <p>Akses dan kelola layanan AsmaraCloudHouse dengan mudah — mulai dari layanan cloud, domain, hosting, pesanan, hingga informasi tagihan.</p>
+              <h1>
+                Kelola Instance Cloud &amp; Tagihan Anda dalam Satu Dashboard.
+              </h1>
+              <p>
+                Akses manajemen VPS berbasis OpenNebula, kelola lisensi
+                cPanel/WHM, perpanjangan domain, dan pantau status server secara
+                real-time.
+              </p>
             </div>
             <aside class="portal-note">
               <div class="portal-note-top">
                 <div class="portal-ico">
-                  <svg class="ico ico-22 ico-white" aria-hidden="true"><use href="#cloud"></use></svg>
+                  <svg class="ico ico-22 ico-white" aria-hidden="true">
+                    <use href="#cloud"></use>
+                  </svg>
                 </div>
                 <div>
-                  <strong>Customer Portal</strong>
-                  <small>AsmaraCloudHouse</small>
+                  <strong>Client Area Gateway</strong>
+                  <small>Node.js &amp; OpenNebula API Connected</small>
                 </div>
               </div>
               <hr />
               <ul>
-                <li><svg class="ico ico-14 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Kelola layanan</li>
-                <li><svg class="ico ico-14 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Pantau pesanan</li>
-                <li><svg class="ico ico-14 ico-green" aria-hidden="true"><use href="#check-circle-2"></use></svg> Cek tagihan</li>
+                <li>
+                  <svg class="ico ico-14 ico-green" aria-hidden="true">
+                    <use href="#check-circle-2"></use>
+                  </svg>
+                  Auto Provisioning VPS
+                </li>
+                <li>
+                  <svg class="ico ico-14 ico-green" aria-hidden="true">
+                    <use href="#check-circle-2"></use>
+                  </svg>
+                  WHM cPanel Integration
+                </li>
+                <li>
+                  <svg class="ico ico-14 ico-green" aria-hidden="true">
+                    <use href="#check-circle-2"></use>
+                  </svg>
+                  RackH Domain Management API
+                </li>
               </ul>
             </aside>
           </div>
@@ -421,70 +915,107 @@
         <section class="portal-cards">
           <div class="card-grid">
             <article class="choice">
-              <div class="choice-ico blue">
-                <svg class="ico ico-22 ico-blue" aria-hidden="true"><use href="#log-in"></use></svg>
+              <div class="choice-ico green">
+                <svg class="ico ico-22 ico-green" aria-hidden="true">
+                  <use href="#log-in"></use>
+                </svg>
               </div>
-              <h2>Sudah punya akun?</h2>
-              <p>Masuk untuk mengakses dashboard pelanggan dan mengelola seluruh layanan Anda.</p>
-              <button class="btn btn-blue" id="show-login" type="button">Masuk ke akun</button>
+              <h2>Sudah Punya Akun?</h2>
+              <p>
+                Masuk ke Client Area untuk mengontrol instance VPS, restart
+                server, atau melihat invoice aktif.
+              </p>
+              <button class="btn btn-green-main" id="show-login" type="button">
+                Masuk ke Client Area
+              </button>
             </article>
             <article class="choice">
               <div class="choice-ico teal">
-                <svg class="ico ico-22 ico-teal" aria-hidden="true"><use href="#shopping-cart"></use></svg>
+                <svg class="ico ico-22 ico-teal" aria-hidden="true">
+                  <use href="#terminal"></use>
+                </svg>
               </div>
-              <h2>Belum punya akun?</h2>
-              <p>Pesan domain, hosting, dan kebutuhan cloud Anda melalui layanan AsmaraCloudHouse.</p>
-              <button class="btn btn-outline" id="order-btn" type="button">Pesan domain &amp; hosting</button>
+              <h2>Mulai Order Layanan</h2>
+              <p>
+                Daftarkan akun baru dan langsung deploy Cloud VPS NVMe atau
+                Shared Hosting Anda sekarang.
+              </p>
+              <button class="btn btn-outline" id="order-btn" type="button">
+                Registrasi &amp; Pesan Baru
+              </button>
             </article>
-          </div>
-          <div class="quick-links">
-            <span>Butuh akses lainnya?</span>
-            <button class="text-btn" id="register-link" type="button">Buat akun baru</button>
-            <span class="dot-sep" aria-hidden="true">•</span>
-            <button class="text-btn" id="help-link" type="button">Bantuan &amp; Support</button>
           </div>
         </section>
       </div>
 
+      <!-- Login / Register Form View -->
       <div class="client-view" id="client-login" hidden>
         <div class="login-screen">
           <form class="login-card" id="login-form">
             <div class="login-badge">
-              <svg class="ico ico-27 ico-white" aria-hidden="true"><use href="#log-in"></use></svg>
+              <svg class="ico ico-27 ico-white" aria-hidden="true">
+                <use href="#log-in"></use>
+              </svg>
             </div>
             <div class="login-card-head">
-              <div class="login-kicker">CLIENT AREA</div>
-              <h1>Masuk ke akun</h1>
-              <p>Kelola layanan, domain, pesanan, dan tagihan AsmaraCloudHouse Anda.</p>
+              <div class="login-kicker">SECURE AUTHENTICATION</div>
+              <h1>Login Client Area</h1>
+              <p>Masukkan kredensial akun ZeixonCloudHouse Anda.</p>
             </div>
             <label class="field">
               <span>Email</span>
-              <input type="email" name="email" placeholder="nama@email.com" autocomplete="username" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="nama@perusahaan.com"
+                autocomplete="username"
+                required
+              />
             </label>
             <label class="field">
-              <span>Kata sandi</span>
-              <input type="password" name="password" placeholder="Masukkan kata sandi" autocomplete="current-password" required />
+              <span>Kata Sandi</span>
+              <input
+                type="password"
+                name="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              />
             </label>
-            <button class="forgot" id="forgot-btn" type="button">Lupa kata sandi?</button>
-            <button class="btn-gradient" type="submit">Masuk ke Client Area</button>
+            <button class="forgot" id="forgot-btn" type="button">
+              Lupa kata sandi?
+            </button>
+            <button class="btn-gradient" type="submit">
+              Masuk ke Dashboard
+            </button>
             <hr />
-            <p class="signup">Belum punya akun? <button id="signup-link" type="button">Buat akun baru</button></p>
-            <button class="btn-ghost" id="back-portal" type="button">Kembali ke Portal Pelanggan</button>
+            <p class="signup">
+              Belum punya akun?
+              <button id="signup-link" type="button">Buat akun baru</button>
+            </p>
+            <button class="btn-ghost" id="back-portal" type="button">
+              Kembali ke Portal
+            </button>
           </form>
         </div>
       </div>
 
       <footer class="client-footer">
         <div class="client-footer-inner">
-          <small>© 2026 PT Asmara CloudHouse. Semua hak dilindungi.</small>
+          <small
+            >© 2026 PT Group Rack H &amp; Zeixon CloudHouse. Hak cipta
+            dilindungi.</small
+          >
           <div class="secure">
-            <svg class="ico ico-15 ico-teal" aria-hidden="true"><use href="#shield-check"></use></svg>
-            Infrastruktur cloud yang aman dan andal
+            <svg class="ico ico-15 ico-teal" aria-hidden="true">
+              <use href="#shield-check"></use>
+            </svg>
+            Protected by SSL &amp; Anti-DDoS
           </div>
         </div>
       </footer>
     </div>
 
-    <script src="js/main.js" defer></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
