@@ -2595,6 +2595,89 @@
         </div>
       </div>
 
+      <div class="client-view" id="client-register" hidden>
+        <div class="login-screen">
+          <form class="login-card register-card" id="register-form">
+            <div class="login-badge">
+              <svg class="ico ico-27 ico-white" aria-hidden="true">
+                <use href="#user"></use>
+              </svg>
+            </div>
+            <div class="login-card-head">
+              <div class="login-kicker">BUAT AKUN</div>
+              <h1>Mulai bersama kami</h1>
+              <p>
+                Daftarkan akun untuk mengelola layanan ZeixonCloudHouse Anda.
+              </p>
+            </div>
+            <label class="field">
+              <span>Nama lengkap</span>
+              <input
+                type="text"
+                name="name"
+                placeholder="Nama lengkap Anda"
+                autocomplete="name"
+                required
+              />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="nama@email.com"
+                autocomplete="email"
+                required
+              />
+            </label>
+            <label class="field">
+              <span>Kata sandi</span>
+              <input
+                id="register-password"
+                type="password"
+                name="password"
+                placeholder="Minimal 8 karakter"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+            </label>
+            <label class="field">
+              <span>Konfirmasi kata sandi</span>
+              <input
+                id="register-password-confirm"
+                type="password"
+                name="password-confirm"
+                placeholder="Ulangi kata sandi"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+            </label>
+            <label class="register-terms">
+              <input type="checkbox" name="terms" required />
+              <span>Saya menyetujui syarat dan ketentuan yang berlaku.</span>
+            </label>
+            <p
+              class="register-status"
+              id="register-status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+            <button class="btn-gradient" type="submit">Buat akun</button>
+            <hr />
+            <p class="signup">
+              Sudah punya akun?
+              <button id="back-login" type="button">Masuk di sini</button>
+            </p>
+            <button class="btn-ghost" id="register-back-portal" type="button">
+              Kembali ke Portal Pelanggan
+            </button>
+          </form>
+        </div>
+      </div>
+
       <footer class="client-footer">
         <div class="client-footer-inner">
           <small>© 2026 PT Zeixon CloudHouse. Semua hak dilindungi.</small>

@@ -6,6 +6,7 @@
   const client = document.getElementById("client");
   const clientPortal = document.getElementById("client-portal");
   const clientLogin = document.getElementById("client-login");
+  const clientRegister = document.getElementById("client-register");
 
   const menuButtons = document.querySelectorAll("[data-menu]");
 
@@ -37,6 +38,15 @@
   function showLogin(on) {
     clientPortal.hidden = on;
     clientLogin.hidden = !on;
+    clientRegister.hidden = true;
+  }
+
+  function showRegister() {
+    clientPortal.hidden = true;
+    clientLogin.hidden = true;
+    clientRegister.hidden = false;
+    registerStatus.hidden = true;
+    registerStatus.textContent = "";
   }
 
   menuButtons.forEach((button) => {
@@ -99,12 +109,10 @@
 
   document.getElementById("show-login").addEventListener("click", () => showLogin(true));
   document.getElementById("back-portal").addEventListener("click", () => showLogin(false));
-  document.getElementById("signup-link").addEventListener("click", () => {
-    alert("Halaman pendaftaran akun akan dibuka di sini.");
-  });
-  document.getElementById("register-link").addEventListener("click", () => {
-    alert("Halaman pendaftaran akun akan dibuka di sini.");
-  });
+  document.getElementById("signup-link").addEventListener("click", showRegister);
+  document.getElementById("register-link").addEventListener("click", showRegister);
+  document.getElementById("back-login").addEventListener("click", () => showLogin(true));
+  document.getElementById("register-back-portal").addEventListener("click", () => showLogin(false));
   document.getElementById("order-btn").addEventListener("click", () => {
     alert("Halaman pemesanan domain & hosting akan dibuka di sini.");
   });
@@ -118,6 +126,29 @@
   document.getElementById("login-form").addEventListener("submit", (event) => {
     event.preventDefault();
     alert("Login berhasil diproses.");
+  });
+
+  const registerForm = document.getElementById("register-form");
+  const registerPassword = document.getElementById("register-password");
+  const registerPasswordConfirm = document.getElementById("register-password-confirm");
+  const registerStatus = document.getElementById("register-status");
+
+  function validatePasswordMatch() {
+    registerPasswordConfirm.setCustomValidity(
+      registerPassword.value === registerPasswordConfirm.value
+        ? ""
+        : "Konfirmasi kata sandi harus sama.",
+    );
+  }
+
+  registerPassword.addEventListener("input", validatePasswordMatch);
+  registerPasswordConfirm.addEventListener("input", validatePasswordMatch);
+  registerForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    validatePasswordMatch();
+    registerStatus.hidden = false;
+    registerStatus.textContent =
+      "Data pendaftaran valid. Pembuatan akun belum aktif karena layanan backend belum terhubung.";
   });
 
   document.querySelectorAll(".mega-card").forEach((card) => {

@@ -1399,6 +1399,10 @@ svg {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
 }
 
+.register-card {
+  max-width: 480px;
+}
+
 .login-badge {
   width: 54px;
   height: 54px;
@@ -1513,6 +1517,35 @@ svg {
   color: var(--teal);
   font-weight: 700;
   padding: 0;
+}
+
+.register-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 2px 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.register-terms input {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  margin: 1px 0 0;
+  accent-color: var(--green);
+}
+
+.register-status {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid #99f6e4;
+  border-radius: 10px;
+  background: var(--mist);
+  color: var(--green-deep);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .btn-ghost {
