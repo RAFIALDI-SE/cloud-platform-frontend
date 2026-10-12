@@ -7,6 +7,7 @@
   const clientPortal = document.getElementById("client-portal");
   const clientLogin = document.getElementById("client-login");
   const clientRegister = document.getElementById("client-register");
+  const API_BASE_URL = "http://127.0.0.1:3000";
 
   const menuButtons = document.querySelectorAll("[data-menu]");
 
@@ -141,14 +142,78 @@
     );
   }
 
+  function showRegisterStatus(message, isError = false) {
+    registerStatus.hidden = false;
+    registerStatus.textContent = message;
+    registerStatus.classList.toggle("is-error", isError);
+  }
+
   registerPassword.addEventListener("input", validatePasswordMatch);
   registerPasswordConfirm.addEventListener("input", validatePasswordMatch);
-  registerForm.addEventListener("submit", (event) => {
+  registerForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     validatePasswordMatch();
-    registerStatus.hidden = false;
-    registerStatus.textContent =
-      "Data pendaftaran valid. Pembuatan akun belum aktif karena layanan backend belum terhubung.";
+
+    if (!registerForm.reportValidity()) return;
+
+    const submitButton = registerForm.querySelector('button[type="submit"]');
+    const formData = new FormData(registerForm);
+    submitButton.disabled = true;
+    showRegisterStatus("Sedang membuat akun...");
+
+    let response;
+    try {
+      response = await fetch(`${API_BASE_URL}/api/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          password: formData.get("password"),
+        }),
+      });
+    } catch (error) {
+      console.error("Gagal menghubungi backend registrasi:", error);
+      showRegisterStatus(
+        "Tidak dapat terhubung ke server. Pastikan backend dan MongoDB sedang berjalan.",
+        true,
+      );
+      submitButton.disabled = false;
+      return;
+    }
+
+    let result;
+    try {
+      result = await response.json();
+    } catch (error) {
+      console.error("Respons backend registrasi tidak valid:", error);
+      showRegisterStatus("Respons dari server tidak dapat dibaca.", true);
+      submitButton.disabled = false;
+      return;
+    }
+
+    if (
+      !response.ok ||
+      !result ||
+      typeof result !== "object" ||
+      result.status !== "success"
+    ) {
+      showRegisterStatus(
+        result && typeof result.message === "string"
+          ? result.message
+          : "Pendaftaran gagal. Silakan coba lagi.",
+        true,
+      );
+      submitButton.disabled = false;
+      return;
+    }
+
+    registerForm.reset();
+    registerPasswordConfirm.setCustomValidity("");
+    submitButton.disabled = false;
+    showLogin(true);
   });
 
   document.querySelectorAll(".mega-card").forEach((card) => {

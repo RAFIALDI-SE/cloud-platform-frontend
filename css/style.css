@@ -1548,6 +1548,12 @@ svg {
   line-height: 1.5;
 }
 
+.register-status.is-error {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
 .btn-ghost {
   width: 100%;
   padding: 10px;
