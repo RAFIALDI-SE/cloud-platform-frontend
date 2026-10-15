@@ -7,7 +7,9 @@
   const clientPortal = document.getElementById("client-portal");
   const clientLogin = document.getElementById("client-login");
   const clientRegister = document.getElementById("client-register");
-  const API_BASE_URL = "http://127.0.0.1:3000";
+  const API_BASE_URL = ["localhost", "127.0.0.1"].includes(location.hostname)
+    ? "http://127.0.0.1:3000"
+    : "https://api.zeixon.com";
 
   const menuButtons = document.querySelectorAll("[data-menu]");
 
