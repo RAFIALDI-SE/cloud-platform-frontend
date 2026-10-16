@@ -1146,22 +1146,40 @@ svg {
   margin: 0 auto;
 }
 
+.client-header .brand {
+  color: var(--ink);
+}
+
+.client-header .brand em {
+  color: var(--teal);
+}
+
+.client-header .brand-mark {
+  background: var(--mist);
+  border-color: #ccfbf1;
+}
+
+.client-header .brand-mark .ico {
+  color: var(--teal);
+}
+
 .back-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 8px 16px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--green);
   border-radius: 8px;
-  background: #fff;
-  color: var(--text);
+  background: var(--green);
+  color: #fff;
   font-size: 13px;
   font-weight: 700;
   transition: background 0.15s;
 }
 
 .back-btn:hover {
-  background: #f1f5f9;
+  background: var(--green-deep);
+  border-color: var(--green-deep);
 }
 
 .client-view {
