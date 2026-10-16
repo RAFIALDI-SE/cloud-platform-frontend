@@ -2060,12 +2060,94 @@
         </div>
 
         <div class="nav-actions">
-          <button class="lang-btn" type="button" aria-label="Bahasa Indonesia">
-            <span aria-hidden="true">🇮🇩</span>
-            <svg class="ico ico-14 ico-white" aria-hidden="true">
-              <use href="#chevron-down"></use>
-            </svg>
-          </button>
+          <div class="language-picker">
+            <button
+              class="language-toggle"
+              id="language-toggle"
+              type="button"
+              aria-label="Pilih bahasa"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="language-menu"
+            >
+              <svg class="language-flag is-current" data-current-flag="id" viewBox="0 0 30 20" aria-hidden="true">
+                <rect width="30" height="10" fill="#e11d48" />
+                <rect y="10" width="30" height="10" fill="#fff" />
+              </svg>
+              <svg class="language-flag" data-current-flag="en" viewBox="0 0 30 20" aria-hidden="true">
+                <rect width="30" height="20" fill="#1e3a8a" />
+                <path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="5" />
+                <path d="M0 0 30 20M30 0 0 20" stroke="#dc2626" stroke-width="2" />
+                <path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="7" />
+                <path d="M15 0v20M0 10h30" stroke="#dc2626" stroke-width="3" />
+              </svg>
+              <svg class="language-flag" data-current-flag="zh-CN" viewBox="0 0 30 20" aria-hidden="true">
+                <rect width="30" height="20" fill="#de2910" />
+                <path d="m6 2 1.2 3.5L11 5.6 8 7.8l1.2 3.6L6 9.2l-3.1 2.2 1.2-3.6L1 5.6l3.8-.1z" fill="#ffde00" />
+              </svg>
+              <svg class="ico ico-14 ico-white chev" aria-hidden="true">
+                <use href="#chevron-down"></use>
+              </svg>
+            </button>
+            <div class="language-menu" id="language-menu" role="menu" hidden>
+              <button
+                class="language-option is-selected"
+                type="button"
+                role="menuitemradio"
+                aria-label="Bahasa Indonesia"
+                aria-checked="true"
+                data-language-choice="id"
+              >
+                <svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true">
+                  <rect width="30" height="10" fill="#e11d48" />
+                  <rect y="10" width="30" height="10" fill="#fff" />
+                </svg>
+                <span>Indonesia</span>
+              </button>
+              <button
+                class="language-option"
+                type="button"
+                role="menuitemradio"
+                aria-label="English"
+                aria-checked="false"
+                data-language-choice="en"
+              >
+                <svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true">
+                  <rect width="30" height="20" fill="#1e3a8a" />
+                  <path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="5" />
+                  <path d="M0 0 30 20M30 0 0 20" stroke="#dc2626" stroke-width="2" />
+                  <path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="7" />
+                  <path d="M15 0v20M0 10h30" stroke="#dc2626" stroke-width="3" />
+                </svg>
+                <span>English</span>
+              </button>
+              <button
+                class="language-option"
+                type="button"
+                role="menuitemradio"
+                aria-label="Bahasa China"
+                aria-checked="false"
+                data-language-choice="zh-CN"
+              >
+                <svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true">
+                  <rect width="30" height="20" fill="#de2910" />
+                  <path d="m6 2 1.2 3.5L11 5.6 8 7.8l1.2 3.6L6 9.2l-3.1 2.2 1.2-3.6L1 5.6l3.8-.1z" fill="#ffde00" />
+                </svg>
+                <span>中文</span>
+              </button>
+            </div>
+            <select
+              class="language-select"
+              id="language-select"
+              tabindex="-1"
+              aria-hidden="true"
+              hidden
+            >
+              <option value="id">id</option>
+              <option value="en">en</option>
+              <option value="zh-CN">zh-CN</option>
+            </select>
+          </div>
           <div class="login-wrap" id="login-wrap">
             <button
               class="login-btn"
