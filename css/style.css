@@ -1505,7 +1505,171 @@ svg {
 }
 
 .register-card {
-  max-width: 480px;
+  max-width: 700px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.register-screen {
+  display: grid;
+  grid-template-columns: minmax(360px, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  justify-content: initial;
+  min-height: calc(100vh - 68px);
+  padding: 0;
+  gap: 0;
+}
+
+.register-promo {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 68px);
+  padding: 64px clamp(40px, 4.2vw, 80px);
+  border-right: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.register-promo-content {
+  width: 100%;
+  max-width: 560px;
+  margin: 0;
+}
+
+.register-promo h1 {
+  margin: 0 0 36px;
+  color: var(--text);
+  font-size: clamp(32px, 2.5vw, 46px);
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.register-benefits {
+  display: grid;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  color: #475569;
+  font-size: 18px;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.register-benefits li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+.register-benefit-check {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  fill: none;
+  stroke: var(--green);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.register-certification {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 10px 16px;
+  border: 1px solid #dbe3ec;
+  border-radius: 999px;
+  background: #fff;
+  color: #475569;
+  font-size: 14px;
+}
+
+.register-certification .ico {
+  color: #64748b;
+}
+
+.register-panel {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  padding: 48px clamp(28px, 5.5vw, 96px);
+  background: #fff;
+}
+
+.register-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 16px;
+}
+
+.register-section-title,
+.register-section-note,
+.register-field-full {
+  grid-column: 1 / -1;
+}
+
+.register-section-title {
+  margin: 4px 0 10px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.register-section-title:not(:first-child) {
+  margin-top: 8px;
+}
+
+.register-section-note {
+  margin: -4px 0 14px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.field b {
+  color: #dc2626;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  color: var(--text);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.register-turnstile {
+  margin: 0 0 16px;
+}
+
+.register-turnstile-note {
+  margin: 8px 0 0;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+#turnstile-widget {
+  min-height: 65px;
 }
 
 .login-badge {
@@ -1603,6 +1767,11 @@ svg {
   opacity: 0.92;
 }
 
+.btn-gradient:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .login-card hr {
   border: 0;
   border-top: 1px solid #f1f5f9;
@@ -1632,6 +1801,75 @@ svg {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .register-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .register-promo {
+    position: static;
+    min-height: auto;
+    padding: 48px 7%;
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .register-promo-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .register-promo h1 {
+    max-width: 560px;
+    margin-bottom: 24px;
+  }
+
+  .register-benefits {
+    gap: 14px;
+    font-size: 16px;
+  }
+
+  .register-certification {
+    margin-top: 28px;
+  }
+
+  .register-panel {
+    padding: 40px 7%;
+  }
+}
+
+@media (max-width: 640px) {
+  .register-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .register-section-title,
+  .register-section-note,
+  .register-field-full {
+    grid-column: auto;
+  }
+
+  .register-promo {
+    padding: 36px 24px;
+  }
+
+  .register-promo h1 {
+    font-size: 30px;
+  }
+
+  .register-benefits {
+    font-size: 15px;
+  }
+
+  .register-panel {
+    padding: 32px 24px;
+  }
+
+  .register-card {
+    padding: 0;
+  }
 }
 
 .register-terms input {

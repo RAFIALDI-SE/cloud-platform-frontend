@@ -222,6 +222,70 @@
     ["Halaman bantuan akan dibuka di sini.", "The help page will open here.", "帮助页面将在此处打开。"],
     ["Fitur lupa password akan dibuka.", "The password recovery feature will open here.", "密码找回功能将在此处打开。"],
     ["Login berhasil diproses.", "Login request processed.", "登录请求已处理。"],
+    ["Informasi pribadi", "Personal information", "个人信息"],
+    ["Satu portal untuk hosting, VPS, dan domain Anda.", "One portal for your hosting, VPS, and domains.", "一个门户，管理您的主机、VPS 和域名。"],
+    ["Bayar invoice dengan QRIS, virtual account, atau kartu tersimpan", "Pay invoices with QRIS, virtual accounts, or a saved card", "使用 QRIS、虚拟账户或已保存的银行卡支付账单"],
+    ["Kelola hosting, VPS, domain, dan DNS dari satu tempat", "Manage hosting, VPS, domains, and DNS in one place", "在一个地方管理主机、VPS、域名和 DNS"],
+    ["Pantau tagihan dan perpanjangan sebelum jatuh tempo", "Track invoices and renewals before they are due", "在账单和续费到期前及时查看"],
+    ["Bersertifikat ISO 9001 & ISO/IEC 27001", "ISO 9001 & ISO/IEC 27001 certified", "通过 ISO 9001 和 ISO/IEC 27001 认证"],
+    ["Nama depan", "First name", "名字"],
+    ["Nama belakang", "Last name", "姓氏"],
+    ["Nomor telepon / WhatsApp", "Phone number / WhatsApp", "电话号码 / WhatsApp"],
+    ["Alamat penagihan", "Billing address", "账单地址"],
+    ["Dipakai untuk invoice dan sebagai data pemilik saat mendaftarkan domain.", "Used for invoices and as the registrant details when registering a domain.", "用于账单以及注册域名时的注册人信息。"],
+    ["Nama perusahaan (isi nama Anda bila perorangan)", "Company name (enter your name if registering as an individual)", "公司名称（个人注册请填写姓名）"],
+    ["Alamat", "Address", "地址"],
+    ["Alamat 2 (opsional)", "Address line 2 (optional)", "地址 2（可选）"],
+    ["Kota", "City", "城市"],
+    ["Provinsi", "Province", "省 / 州"],
+    ["Kode pos", "Postal code", "邮政编码"],
+    ["Negara", "Country", "国家"],
+    ["Sandi (min. 10 karakter)", "Password (at least 10 characters)", "密码（至少 10 个字符）"],
+    ["Mata uang", "Currency", "货币"],
+    ["Sektor Usaha", "Industry", "行业"],
+    ["Dari mana Anda mengetahui kami?", "How did you hear about us?", "您是如何了解到我们的？"],
+    ["Lainnya", "Other", "其他"],
+    ["Perorangan", "Individual", "个人"],
+    ["Teknologi / IT", "Technology / IT", "科技 / IT"],
+    ["Keuangan", "Finance", "金融"],
+    ["Ritel / E-commerce", "Retail / E-commerce", "零售 / 电子商务"],
+    ["Pendidikan", "Education", "教育"],
+    ["Kesehatan", "Healthcare", "医疗健康"],
+    ["Manufaktur", "Manufacturing", "制造业"],
+    ["Pemerintahan", "Government", "政府"],
+    ["Mesin pencari", "Search engine", "搜索引擎"],
+    ["Media sosial", "Social media", "社交媒体"],
+    ["Rekomendasi", "Referral", "推荐"],
+    ["Iklan", "Advertisement", "广告"],
+    ["Acara / komunitas", "Event / community", "活动 / 社区"],
+    ["— Pilih sektor usaha —", "— Select an industry —", "— 请选择行业 —"],
+    ["Daftar", "Register", "注册"],
+    ["Data pemilik akun dipakai untuk invoice dan sebagai data pemilik domain di registrar.", "Account owner details are used for invoices and as the domain registrant details.", "账户所有者信息将用于账单和域名注册人资料。"],
+    ["Indonesia", "Indonesia", "印度尼西亚"],
+    ["Malaysia", "Malaysia", "马来西亚"],
+    ["Singapore", "Singapore", "新加坡"],
+    ["United States", "United States", "美国"],
+    ["United Kingdom", "United Kingdom", "英国"],
+    ["IDR (Rupiah)", "IDR (Indonesian Rupiah)", "IDR（印尼卢比）"],
+    ["USD (US Dollar)", "USD (US Dollar)", "USD（美元）"],
+    ["SGD (Singapore Dollar)", "SGD (Singapore Dollar)", "SGD（新加坡元）"],
+    ["MYR (Malaysian Ringgit)", "MYR (Malaysian Ringgit)", "MYR（马来西亚林吉特）"],
+    ["GBP (British Pound)", "GBP (British Pound)", "GBP（英镑）"],
+    ["Konfigurasi verifikasi belum tersedia. Hubungi administrator.", "Verification is not configured yet. Please contact the administrator.", "验证功能尚未配置，请联系管理员。"],
+    ["Memuat verifikasi keamanan...", "Loading security verification...", "正在加载安全验证..."],
+    ["Verifikasi keamanan gagal dimuat. Muat ulang halaman dan coba lagi.", "Security verification failed to load. Reload the page and try again.", "安全验证加载失败，请刷新页面后重试。"],
+    ["Selesaikan verifikasi keamanan terlebih dahulu.", "Complete the security verification first.", "请先完成安全验证。"],
+    ["Selesaikan verifikasi keamanan sebelum mendaftar.", "Complete the security verification before registering.", "注册前请先完成安全验证。"],
+    ["Lengkapi semua field wajib pada formulir registrasi.", "Complete all required registration fields.", "请填写所有必填注册信息。"],
+    ["Nama depan dan belakang maksimal 100 karakter masing-masing.", "First and last names must each be 100 characters or fewer.", "名字和姓氏各不能超过 100 个字符。"],
+    ["Format nomor telepon tidak valid.", "Invalid phone number format.", "电话号码格式无效。"],
+    ["Salah satu field alamat melebihi batas panjang.", "One of the address fields exceeds the maximum length.", "其中一个地址字段超出长度限制。"],
+    ["Pilihan negara, mata uang, sektor, atau sumber tidak valid.", "Invalid country, currency, industry, or referral source.", "国家、货币、行业或来源选项无效。"],
+    ["Verifikasi keamanan belum dikonfigurasi di server.", "Security verification is not configured on the server.", "服务器尚未配置安全验证。"],
+    ["Layanan verifikasi keamanan sedang bermasalah. Coba lagi.", "The security verification service is unavailable. Please try again.", "安全验证服务暂不可用，请重试。"],
+    ["Verifikasi keamanan gagal atau kedaluwarsa. Coba lagi.", "Security verification failed or expired. Please try again.", "安全验证失败或已过期，请重试。"],
+    ["Tidak dapat menghubungi layanan verifikasi keamanan.", "Could not contact the security verification service.", "无法连接安全验证服务。"],
+    ["Sandi minimal 10 karakter dan maksimal 72 byte.", "Password must be at least 10 characters and no more than 72 bytes.", "密码至少需要 10 个字符，且最多为 72 字节。"],
   ];
 
   translationEntries.forEach(([source, english, chinese]) => {
@@ -416,6 +480,7 @@
     registerStatus.hidden = true;
     registerStatus.textContent = "";
     delete registerStatus.dataset.sourceMessage;
+    initializeTurnstile();
   }
 
   menuButtons.forEach((button) => {
@@ -499,15 +564,102 @@
 
   const registerForm = document.getElementById("register-form");
   const registerPassword = document.getElementById("register-password");
-  const registerPasswordConfirm = document.getElementById("register-password-confirm");
   const registerStatus = document.getElementById("register-status");
+  const registerSubmit = document.getElementById("register-submit");
+  const turnstileNote = document.getElementById("turnstile-note");
+  const turnstileSiteKey = document
+    .querySelector('meta[name="turnstile-site-key"]')
+    .content.trim();
+  let turnstileWidgetId = null;
+  let turnstileToken = "";
+  let turnstileScriptLoading = false;
 
-  function validatePasswordMatch() {
-    registerPasswordConfirm.setCustomValidity(
-      registerPassword.value === registerPasswordConfirm.value
-        ? ""
-        : localizedText("Konfirmasi kata sandi harus sama."),
-    );
+  function setTurnstileNote(message) {
+    turnstileNote.textContent = localizedText(message);
+    turnstileNote.dataset.sourceMessage = message;
+  }
+
+  function resetTurnstile() {
+    turnstileToken = "";
+    registerSubmit.disabled = true;
+    if (turnstileWidgetId !== null && window.turnstile) {
+      window.turnstile.reset(turnstileWidgetId);
+    }
+  }
+
+  function initializeTurnstile() {
+    if (!turnstileSiteKey) {
+      registerSubmit.disabled = true;
+      setTurnstileNote(
+        "Konfigurasi verifikasi belum tersedia. Hubungi administrator.",
+      );
+      return;
+    }
+
+    if (turnstileWidgetId !== null || turnstileScriptLoading) return;
+    if (window.turnstile) {
+      renderTurnstile();
+      return;
+    }
+
+    turnstileScriptLoading = true;
+    registerSubmit.disabled = true;
+    setTurnstileNote("Memuat verifikasi keamanan...");
+
+    const script = document.createElement("script");
+    script.src =
+      "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+    script.async = true;
+    script.defer = true;
+    script.addEventListener("load", () => {
+      turnstileScriptLoading = false;
+      renderTurnstile();
+    });
+    script.addEventListener("error", () => {
+      turnstileScriptLoading = false;
+      registerSubmit.disabled = true;
+      setTurnstileNote(
+        "Verifikasi keamanan gagal dimuat. Muat ulang halaman dan coba lagi.",
+      );
+    });
+    document.head.append(script);
+  }
+
+  function renderTurnstile() {
+    if (!window.turnstile || turnstileWidgetId !== null) return;
+
+    try {
+      turnstileWidgetId = window.turnstile.render("#turnstile-widget", {
+        sitekey: turnstileSiteKey,
+        callback(token) {
+          turnstileToken = token;
+          registerSubmit.disabled = false;
+          turnstileNote.textContent = "";
+          delete turnstileNote.dataset.sourceMessage;
+        },
+        "expired-callback"() {
+          resetTurnstile();
+          setTurnstileNote(
+            "Verifikasi keamanan gagal atau kedaluwarsa. Coba lagi.",
+          );
+        },
+        "error-callback"() {
+          resetTurnstile();
+          setTurnstileNote(
+            "Verifikasi keamanan gagal dimuat. Muat ulang halaman dan coba lagi.",
+          );
+        },
+        language:
+          languageSelect.value === "zh-CN" ? "zh-cn" : languageSelect.value,
+        theme: "light",
+      });
+    } catch (error) {
+      console.error("Tidak dapat menampilkan widget Turnstile:", error);
+      registerSubmit.disabled = true;
+      setTurnstileNote(
+        "Verifikasi keamanan gagal dimuat. Muat ulang halaman dan coba lagi.",
+      );
+    }
   }
 
   function showRegisterStatus(message, isError = false) {
@@ -517,17 +669,31 @@
     registerStatus.classList.toggle("is-error", isError);
   }
 
-  registerPassword.addEventListener("input", validatePasswordMatch);
-  registerPasswordConfirm.addEventListener("input", validatePasswordMatch);
+  languageSelect.addEventListener("change", () => {
+    if (turnstileWidgetId !== null && window.turnstile) {
+      window.turnstile.remove(turnstileWidgetId);
+      turnstileWidgetId = null;
+      turnstileToken = "";
+      registerSubmit.disabled = true;
+      renderTurnstile();
+    }
+    if (turnstileNote.dataset.sourceMessage) {
+      setTurnstileNote(turnstileNote.dataset.sourceMessage);
+    }
+  });
+
   registerForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    validatePasswordMatch();
 
     if (!registerForm.reportValidity()) return;
 
-    const submitButton = registerForm.querySelector('button[type="submit"]');
+    if (!turnstileToken) {
+      setTurnstileNote("Selesaikan verifikasi keamanan sebelum mendaftar.");
+      return;
+    }
+
     const formData = new FormData(registerForm);
-    submitButton.disabled = true;
+    registerSubmit.disabled = true;
     showRegisterStatus("Sedang membuat akun...");
 
     let response;
@@ -538,9 +704,22 @@
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: formData.get("name"),
+          firstName: formData.get("firstName"),
+          lastName: formData.get("lastName"),
           email: formData.get("email"),
+          phone: formData.get("phone"),
+          companyName: formData.get("companyName"),
+          address1: formData.get("address1"),
+          address2: formData.get("address2"),
+          city: formData.get("city"),
+          province: formData.get("province"),
+          postalCode: formData.get("postalCode"),
+          country: formData.get("country"),
+          currency: formData.get("currency"),
+          industry: formData.get("industry"),
+          referralSource: formData.get("referralSource"),
           password: formData.get("password"),
+          turnstileToken,
         }),
       });
     } catch (error) {
@@ -549,7 +728,7 @@
         "Tidak dapat terhubung ke server. Pastikan backend dan MongoDB sedang berjalan.",
         true,
       );
-      submitButton.disabled = false;
+      resetTurnstile();
       return;
     }
 
@@ -559,7 +738,7 @@
     } catch (error) {
       console.error("Respons backend registrasi tidak valid:", error);
       showRegisterStatus("Respons dari server tidak dapat dibaca.", true);
-      submitButton.disabled = false;
+      resetTurnstile();
       return;
     }
 
@@ -575,13 +754,12 @@
           : "Pendaftaran gagal. Silakan coba lagi.",
         true,
       );
-      submitButton.disabled = false;
+      resetTurnstile();
       return;
     }
 
     registerForm.reset();
-    registerPasswordConfirm.setCustomValidity("");
-    submitButton.disabled = false;
+    resetTurnstile();
     showLogin(true);
   });
 
