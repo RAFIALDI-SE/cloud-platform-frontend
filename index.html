@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0d9488" />
+    <meta name="turnstile-site-key" content="0x4AAAAAAFY_-95qEFGk7eRP" />
     <meta
       name="description"
       content="ZeixonCloudHouse — Cloud VPS eXtreme NVMe, GPU Tesla, dan layanan cloud untuk bisnis."
@@ -2070,20 +2071,42 @@
               aria-expanded="false"
               aria-controls="language-menu"
             >
-              <svg class="language-flag is-current" data-current-flag="id" viewBox="0 0 30 20" aria-hidden="true">
+              <svg
+                class="language-flag is-current"
+                data-current-flag="id"
+                viewBox="0 0 30 20"
+                aria-hidden="true"
+              >
                 <rect width="30" height="10" fill="#e11d48" />
                 <rect y="10" width="30" height="10" fill="#fff" />
               </svg>
-              <svg class="language-flag" data-current-flag="en" viewBox="0 0 30 20" aria-hidden="true">
+              <svg
+                class="language-flag"
+                data-current-flag="en"
+                viewBox="0 0 30 20"
+                aria-hidden="true"
+              >
                 <rect width="30" height="20" fill="#1e3a8a" />
                 <path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="5" />
-                <path d="M0 0 30 20M30 0 0 20" stroke="#dc2626" stroke-width="2" />
+                <path
+                  d="M0 0 30 20M30 0 0 20"
+                  stroke="#dc2626"
+                  stroke-width="2"
+                />
                 <path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="7" />
                 <path d="M15 0v20M0 10h30" stroke="#dc2626" stroke-width="3" />
               </svg>
-              <svg class="language-flag" data-current-flag="zh-CN" viewBox="0 0 30 20" aria-hidden="true">
+              <svg
+                class="language-flag"
+                data-current-flag="zh-CN"
+                viewBox="0 0 30 20"
+                aria-hidden="true"
+              >
                 <rect width="30" height="20" fill="#de2910" />
-                <path d="m6 2 1.2 3.5L11 5.6 8 7.8l1.2 3.6L6 9.2l-3.1 2.2 1.2-3.6L1 5.6l3.8-.1z" fill="#ffde00" />
+                <path
+                  d="m6 2 1.2 3.5L11 5.6 8 7.8l1.2 3.6L6 9.2l-3.1 2.2 1.2-3.6L1 5.6l3.8-.1z"
+                  fill="#ffde00"
+                />
               </svg>
               <svg class="ico ico-14 ico-white chev" aria-hidden="true">
                 <use href="#chevron-down"></use>
@@ -2098,7 +2121,11 @@
                 aria-checked="true"
                 data-language-choice="id"
               >
-                <svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true">
+                <svg
+                  class="language-flag"
+                  viewBox="0 0 30 20"
+                  aria-hidden="true"
+                >
                   <rect width="30" height="10" fill="#e11d48" />
                   <rect y="10" width="30" height="10" fill="#fff" />
                 </svg>
@@ -2112,12 +2139,28 @@
                 aria-checked="false"
                 data-language-choice="en"
               >
-                <svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true">
+                <svg
+                  class="language-flag"
+                  viewBox="0 0 30 20"
+                  aria-hidden="true"
+                >
                   <rect width="30" height="20" fill="#1e3a8a" />
-                  <path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="5" />
-                  <path d="M0 0 30 20M30 0 0 20" stroke="#dc2626" stroke-width="2" />
+                  <path
+                    d="M0 0 30 20M30 0 0 20"
+                    stroke="#fff"
+                    stroke-width="5"
+                  />
+                  <path
+                    d="M0 0 30 20M30 0 0 20"
+                    stroke="#dc2626"
+                    stroke-width="2"
+                  />
                   <path d="M15 0v20M0 10h30" stroke="#fff" stroke-width="7" />
-                  <path d="M15 0v20M0 10h30" stroke="#dc2626" stroke-width="3" />
+                  <path
+                    d="M15 0v20M0 10h30"
+                    stroke="#dc2626"
+                    stroke-width="3"
+                  />
                 </svg>
                 <span>English</span>
               </button>
@@ -2129,9 +2172,16 @@
                 aria-checked="false"
                 data-language-choice="zh-CN"
               >
-                <svg class="language-flag" viewBox="0 0 30 20" aria-hidden="true">
+                <svg
+                  class="language-flag"
+                  viewBox="0 0 30 20"
+                  aria-hidden="true"
+                >
                   <rect width="30" height="20" fill="#de2910" />
-                  <path d="m6 2 1.2 3.5L11 5.6 8 7.8l1.2 3.6L6 9.2l-3.1 2.2 1.2-3.6L1 5.6l3.8-.1z" fill="#ffde00" />
+                  <path
+                    d="m6 2 1.2 3.5L11 5.6 8 7.8l1.2 3.6L6 9.2l-3.1 2.2 1.2-3.6L1 5.6l3.8-.1z"
+                    fill="#ffde00"
+                  />
                 </svg>
                 <span>中文</span>
               </button>
@@ -2678,8 +2728,40 @@
       </div>
 
       <div class="client-view" id="client-register" hidden>
-        <div class="login-screen">
-          <form class="login-card register-card" id="register-form">
+        <div class="login-screen register-screen">
+          <aside class="register-promo">
+            <div class="register-promo-content">
+              <h1>Satu portal untuk hosting, VPS, dan domain Anda.</h1>
+              <ul class="register-benefits">
+                <li>
+                  <svg class="register-benefit-check" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m5 12 5 5L20 7"></path>
+                  </svg>
+                  <span>Bayar invoice dengan QRIS, virtual account, atau kartu tersimpan</span>
+                </li>
+                <li>
+                  <svg class="register-benefit-check" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m5 12 5 5L20 7"></path>
+                  </svg>
+                  <span>Kelola hosting, VPS, domain, dan DNS dari satu tempat</span>
+                </li>
+                <li>
+                  <svg class="register-benefit-check" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m5 12 5 5L20 7"></path>
+                  </svg>
+                  <span>Pantau tagihan dan perpanjangan sebelum jatuh tempo</span>
+                </li>
+              </ul>
+              <div class="register-certification">
+                <svg class="ico ico-17" aria-hidden="true">
+                  <use href="#shield-check"></use>
+                </svg>
+                <span>Bersertifikat ISO 9001 &amp; ISO/IEC 27001</span>
+              </div>
+            </div>
+          </aside>
+          <div class="register-panel">
+            <form class="login-card register-card" id="register-form">
             <div class="login-badge">
               <svg class="ico ico-27 ico-white" aria-hidden="true">
                 <use href="#user"></use>
@@ -2687,59 +2769,198 @@
             </div>
             <div class="login-card-head">
               <div class="login-kicker">BUAT AKUN</div>
-              <h1>Mulai bersama kami</h1>
+              <h1>Buat akun</h1>
               <p>
-                Daftarkan akun untuk mengelola layanan ZeixonCloudHouse Anda.
+                Data pemilik akun dipakai untuk invoice dan sebagai data pemilik
+                domain di registrar.
               </p>
             </div>
-            <label class="field">
-              <span>Nama lengkap</span>
-              <input
-                type="text"
-                name="name"
-                placeholder="Nama lengkap Anda"
-                autocomplete="name"
-                required
-              />
-            </label>
-            <label class="field">
-              <span>Email</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="nama@email.com"
-                autocomplete="email"
-                required
-              />
-            </label>
-            <label class="field">
-              <span>Kata sandi</span>
-              <input
-                id="register-password"
-                type="password"
-                name="password"
-                placeholder="Minimal 8 karakter"
-                autocomplete="new-password"
-                minlength="8"
-                required
-              />
-            </label>
-            <label class="field">
-              <span>Konfirmasi kata sandi</span>
-              <input
-                id="register-password-confirm"
-                type="password"
-                name="password-confirm"
-                placeholder="Ulangi kata sandi"
-                autocomplete="new-password"
-                minlength="8"
-                required
-              />
-            </label>
-            <label class="register-terms">
-              <input type="checkbox" name="terms" required />
-              <span>Saya menyetujui syarat dan ketentuan yang berlaku.</span>
-            </label>
+            <div class="register-fields">
+              <h2 class="register-section-title">Informasi pribadi</h2>
+              <label class="field">
+                <span>Nama depan <b>*</b></span>
+                <input
+                  type="text"
+                  name="firstName"
+                  autocomplete="given-name"
+                  maxlength="100"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Nama belakang <b>*</b></span>
+                <input
+                  type="text"
+                  name="lastName"
+                  autocomplete="family-name"
+                  maxlength="100"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Email <b>*</b></span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="nama@perusahaan.com"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Nomor telepon / WhatsApp <b>*</b></span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+62 8xx-xxxx-xxxx"
+                  autocomplete="tel"
+                  maxlength="32"
+                  pattern="(?:[0-9]|\+|\(|\)|\.| |-){7,32}"
+                  required
+                />
+              </label>
+
+              <h2 class="register-section-title">Alamat penagihan</h2>
+              <p class="register-section-note">
+                Dipakai untuk invoice dan sebagai data pemilik saat mendaftarkan
+                domain.
+              </p>
+              <label class="field register-field-full">
+                <span
+                  >Nama perusahaan (isi nama Anda bila perorangan)
+                  <b>*</b></span
+                >
+                <input
+                  type="text"
+                  name="companyName"
+                  autocomplete="organization"
+                  maxlength="150"
+                  required
+                />
+              </label>
+              <label class="field register-field-full">
+                <span>Alamat <b>*</b></span>
+                <input
+                  type="text"
+                  name="address1"
+                  autocomplete="address-line1"
+                  maxlength="250"
+                  required
+                />
+              </label>
+              <label class="field register-field-full">
+                <span>Alamat 2 (opsional)</span>
+                <input
+                  type="text"
+                  name="address2"
+                  autocomplete="address-line2"
+                  maxlength="250"
+                />
+              </label>
+              <label class="field">
+                <span>Kota <b>*</b></span>
+                <input
+                  type="text"
+                  name="city"
+                  autocomplete="address-level2"
+                  maxlength="100"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Provinsi <b>*</b></span>
+                <input
+                  type="text"
+                  name="province"
+                  autocomplete="address-level1"
+                  maxlength="100"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Kode pos <b>*</b></span>
+                <input
+                  type="text"
+                  name="postalCode"
+                  autocomplete="postal-code"
+                  maxlength="20"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Negara</span>
+                <select name="country" autocomplete="country-name">
+                  <option value="Indonesia" selected>Indonesia</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Other">Lainnya</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Sandi (min. 10 karakter) <b>*</b></span>
+                <input
+                  id="register-password"
+                  type="password"
+                  name="password"
+                  autocomplete="new-password"
+                  minlength="10"
+                  maxlength="72"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Mata uang</span>
+                <select name="currency">
+                  <option value="IDR" selected>IDR (Rupiah)</option>
+                  <option value="USD">USD (US Dollar)</option>
+                  <option value="SGD">SGD (Singapore Dollar)</option>
+                  <option value="MYR">MYR (Malaysian Ringgit)</option>
+                  <option value="GBP">GBP (British Pound)</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Sektor Usaha <b>*</b></span>
+                <select name="industry" required>
+                  <option value="" selected disabled>
+                    — Pilih sektor usaha —
+                  </option>
+                  <option value="individual">Perorangan</option>
+                  <option value="technology">Teknologi / IT</option>
+                  <option value="finance">Keuangan</option>
+                  <option value="retail">Ritel / E-commerce</option>
+                  <option value="education">Pendidikan</option>
+                  <option value="healthcare">Kesehatan</option>
+                  <option value="manufacturing">Manufaktur</option>
+                  <option value="media">Media</option>
+                  <option value="government">Pemerintahan</option>
+                  <option value="other">Lainnya</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Dari mana Anda mengetahui kami?</span>
+                <select name="referralSource">
+                  <option value="" selected>—</option>
+                  <option value="search">Mesin pencari</option>
+                  <option value="social">Media sosial</option>
+                  <option value="referral">Rekomendasi</option>
+                  <option value="advertisement">Iklan</option>
+                  <option value="event">Acara / komunitas</option>
+                  <option value="other">Lainnya</option>
+                </select>
+              </label>
+            </div>
+            <div class="register-turnstile register-field-full">
+              <div id="turnstile-widget"></div>
+              <p
+                class="register-turnstile-note"
+                id="turnstile-note"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </div>
             <p
               class="register-status"
               id="register-status"
@@ -2747,7 +2968,14 @@
               aria-live="polite"
               hidden
             ></p>
-            <button class="btn-gradient" type="submit">Buat akun</button>
+            <button
+              class="btn-gradient register-field-full"
+              id="register-submit"
+              type="submit"
+              disabled
+            >
+              Daftar
+            </button>
             <hr />
             <p class="signup">
               Sudah punya akun?
@@ -2756,7 +2984,8 @@
             <button class="btn-ghost" id="register-back-portal" type="button">
               Kembali ke Portal Pelanggan
             </button>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
 
