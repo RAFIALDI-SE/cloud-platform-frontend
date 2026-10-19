@@ -6,9 +6,10 @@
   const client = document.getElementById("client");
   const clientPortal = document.getElementById("client-portal");
   const clientLogin = document.getElementById("client-login");
+  const clientHome = document.getElementById("client-home");
   const clientRegister = document.getElementById("client-register");
   const API_BASE_URL = ["localhost", "127.0.0.1"].includes(location.hostname)
-    ? "http://127.0.0.1:3000"
+    ? `http://${location.hostname}:3000`
     : "https://api.zeixon.com";
 
   const menuButtons = document.querySelectorAll("[data-menu]");
@@ -212,6 +213,14 @@
     ["Pendaftaran gagal. Silakan coba lagi.", "Registration failed. Please try again.", "注册失败，请重试。"],
     ["Pendaftaran berhasil.", "Registration successful.", "注册成功。"],
     ["Terjadi kesalahan pada server.", "A server error occurred.", "服务器发生错误。"],
+    ["Email atau kata sandi salah.", "Incorrect email or password.", "电子邮箱或密码错误。"],
+    ["Masukkan email dan kata sandi yang valid.", "Enter a valid email and password.", "请输入有效的电子邮箱和密码。"],
+    ["Sedang masuk...", "Signing in...", "正在登录..."],
+    ["Gagal masuk. Silakan coba lagi.", "Sign-in failed. Please try again.", "登录失败，请重试。"],
+    ["Tidak dapat menghubungi server. Coba lagi.", "Unable to reach the server. Please try again.", "无法连接服务器，请重试。"],
+    ["Tidak dapat membaca respons server.", "Could not read the server response.", "无法读取服务器响应。"],
+    ["Logout", "Log out", "退出登录"],
+    ["Logout gagal. Coba lagi.", "Log out failed. Please try again.", "退出登录失败，请重试。"],
     ["Email sudah terdaftar.", "This email is already registered.", "该邮箱已注册。"],
     ["Nama, email, dan password wajib diisi.", "Name, email, and password are required.", "姓名、电子邮箱和密码为必填项。"],
     ["Nama maksimal 100 karakter.", "Name must be 100 characters or fewer.", "姓名最多可输入 100 个字符。"],
@@ -400,6 +409,15 @@
         selectedLanguage,
       );
     }
+    ["login-status", "logout-status"].forEach((id) => {
+      const status = document.getElementById(id);
+      if (status && status.dataset.sourceMessage) {
+        status.textContent = localizedText(
+          status.dataset.sourceMessage,
+          selectedLanguage,
+        );
+      }
+    });
   }
 
   let savedLanguage = "id";
@@ -461,21 +479,103 @@
     navToggle.setAttribute("aria-expanded", "false");
   }
 
+  let sessionCheckSequence = 0;
+
+  function setLoginStatus(message, isError = false) {
+    const status = document.getElementById("login-status");
+    status.hidden = false;
+    status.dataset.sourceMessage = message;
+    status.textContent = localizedText(message);
+    status.classList.toggle("is-error", isError);
+  }
+
+  function setLogoutStatus(message) {
+    const status = document.getElementById("logout-status");
+    status.hidden = false;
+    status.dataset.sourceMessage = message;
+    status.textContent = localizedText(message);
+    status.classList.add("is-error");
+  }
+
   function showClient(visible) {
     client.hidden = !visible;
     document.body.classList.toggle("client-open", visible);
-    if (!visible) showLogin(false);
+    if (!visible) {
+      showLogin(false);
+      return;
+    }
+
+    showLogin(false);
+    const checkSequence = ++sessionCheckSequence;
+    fetch(`${API_BASE_URL}/api/session`, { credentials: "include" })
+      .then(async (response) => {
+        let result;
+        try {
+          result = await response.json();
+        } catch (error) {
+          console.error("Respons pemeriksaan sesi tidak valid:", error);
+          throw new Error("Respons sesi tidak dapat dibaca.");
+        }
+
+        if (!response.ok || result.status !== "success") {
+          throw new Error(
+            typeof result.message === "string"
+              ? result.message
+              : "Gagal memeriksa sesi pengguna.",
+          );
+        }
+        return result;
+      })
+      .then((result) => {
+        if (
+          checkSequence !== sessionCheckSequence ||
+          client.hidden ||
+          !result.authenticated
+        ) {
+          return;
+        }
+        showHome();
+      })
+      .catch((error) => {
+        if (checkSequence === sessionCheckSequence) {
+          console.error("Gagal memeriksa sesi pengguna:", error);
+        }
+      });
   }
 
   function showLogin(on) {
+    sessionCheckSequence += 1;
     clientPortal.hidden = on;
     clientLogin.hidden = !on;
+    clientHome.hidden = true;
     clientRegister.hidden = true;
+    const loginStatus = document.getElementById("login-status");
+    loginStatus.hidden = true;
+    loginStatus.textContent = "";
+    delete loginStatus.dataset.sourceMessage;
+    const logoutStatus = document.getElementById("logout-status");
+    logoutStatus.hidden = true;
+    logoutStatus.textContent = "";
+    delete logoutStatus.dataset.sourceMessage;
+  }
+
+  function showHome() {
+    sessionCheckSequence += 1;
+    clientPortal.hidden = true;
+    clientLogin.hidden = true;
+    clientHome.hidden = false;
+    clientRegister.hidden = true;
+    const logoutStatus = document.getElementById("logout-status");
+    logoutStatus.hidden = true;
+    logoutStatus.textContent = "";
+    delete logoutStatus.dataset.sourceMessage;
   }
 
   function showRegister() {
+    sessionCheckSequence += 1;
     clientPortal.hidden = true;
     clientLogin.hidden = true;
+    clientHome.hidden = true;
     clientRegister.hidden = false;
     registerStatus.hidden = true;
     registerStatus.textContent = "";
@@ -557,9 +657,108 @@
     alert(localizedText("Fitur lupa password akan dibuka."));
   });
 
-  document.getElementById("login-form").addEventListener("submit", (event) => {
+  const loginForm = document.getElementById("login-form");
+  const loginSubmit = loginForm.querySelector('button[type="submit"]');
+
+  loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    alert(localizedText("Login berhasil diproses."));
+    if (!loginForm.reportValidity()) return;
+
+    const formData = new FormData(loginForm);
+    loginSubmit.disabled = true;
+    setLoginStatus("Sedang masuk...");
+
+    let response;
+    try {
+      response = await fetch(`${API_BASE_URL}/api/login`, {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.get("email"),
+          password: formData.get("password"),
+        }),
+      });
+    } catch (error) {
+      console.error("Gagal menghubungi backend login:", error);
+      setLoginStatus("Tidak dapat menghubungi server. Coba lagi.", true);
+      loginSubmit.disabled = false;
+      return;
+    }
+
+    let result;
+    try {
+      result = await response.json();
+    } catch (error) {
+      console.error("Respons backend login tidak valid:", error);
+      setLoginStatus("Tidak dapat membaca respons server.", true);
+      loginSubmit.disabled = false;
+      return;
+    }
+
+    if (
+      !response.ok ||
+      !result ||
+      typeof result !== "object" ||
+      result.status !== "success" ||
+      result.authenticated !== true
+    ) {
+      setLoginStatus(
+        result && typeof result.message === "string"
+          ? result.message
+          : "Gagal masuk. Silakan coba lagi.",
+        true,
+      );
+      loginSubmit.disabled = false;
+      return;
+    }
+
+    loginForm.reset();
+    showHome();
+    loginSubmit.disabled = false;
+  });
+
+  const logoutButton = document.getElementById("logout-btn");
+  const logoutStatus = document.getElementById("logout-status");
+
+  logoutButton.addEventListener("click", async () => {
+    logoutButton.disabled = true;
+    logoutStatus.hidden = true;
+    logoutStatus.textContent = "";
+    delete logoutStatus.dataset.sourceMessage;
+
+    let response;
+    try {
+      response = await fetch(`${API_BASE_URL}/api/logout`, {
+        method: "POST",
+        credentials: "include",
+      });
+    } catch (error) {
+      console.error("Gagal menghubungi backend untuk logout:", error);
+      setLogoutStatus("Logout gagal. Coba lagi.");
+      logoutButton.disabled = false;
+      return;
+    }
+
+    let result;
+    try {
+      result = await response.json();
+    } catch (error) {
+      console.error("Respons backend logout tidak valid:", error);
+      setLogoutStatus("Logout gagal. Coba lagi.");
+      logoutButton.disabled = false;
+      return;
+    }
+
+    if (!response.ok || !result || result.status !== "success") {
+      console.error("Backend menolak logout:", result);
+      setLogoutStatus("Logout gagal. Coba lagi.");
+      logoutButton.disabled = false;
+      return;
+    }
+
+    showLogin(true);
+    logoutButton.disabled = false;
   });
 
   const registerForm = document.getElementById("register-form");
