@@ -2715,6 +2715,13 @@
             <button class="btn-gradient" type="submit">
               Masuk ke Client Area
             </button>
+            <p
+              class="register-status"
+              id="login-status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
             <hr />
             <p class="signup">
               Belum punya akun?
@@ -2725,6 +2732,23 @@
             </button>
           </form>
         </div>
+      </div>
+
+      <div class="client-view" id="client-home" hidden>
+        <main class="client-home">
+          <div class="client-home-content">
+            <p
+              class="register-status"
+              id="logout-status"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+            <button class="btn-gradient logout-btn" id="logout-btn" type="button">
+              Logout
+            </button>
+          </div>
+        </main>
       </div>
 
       <div class="client-view" id="client-register" hidden>

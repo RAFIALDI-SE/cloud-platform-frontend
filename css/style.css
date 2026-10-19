@@ -1504,6 +1504,23 @@ svg {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
 }
 
+.client-home {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: 40px 20px;
+}
+
+.client-home-content {
+  width: min(100%, 320px);
+  text-align: center;
+}
+
+.logout-btn {
+  width: 100%;
+}
+
 .register-card {
   max-width: 700px;
   padding: 0;
