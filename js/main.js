@@ -219,8 +219,39 @@
     ["Gagal masuk. Silakan coba lagi.", "Sign-in failed. Please try again.", "登录失败，请重试。"],
     ["Tidak dapat menghubungi server. Coba lagi.", "Unable to reach the server. Please try again.", "无法连接服务器，请重试。"],
     ["Tidak dapat membaca respons server.", "Could not read the server response.", "无法读取服务器响应。"],
-    ["Logout", "Log out", "退出登录"],
+    ["Keluar", "Log out", "退出登录"],
     ["Logout gagal. Coba lagi.", "Log out failed. Please try again.", "退出登录失败，请重试。"],
+    ["Profil & keamanan", "Profile & security", "个人资料与安全"],
+    ["Pengguna", "Users", "用户"],
+    ["Afiliasi", "Affiliates", "联盟"],
+    ["Bahasa dashboard", "Dashboard language", "仪表板语言"],
+    ["Tema dashboard", "Dashboard theme", "仪表板主题"],
+    ["Terang", "Light", "浅色"],
+    ["Gelap", "Dark", "深色"],
+    ["Ringkasan", "Overview", "概览"],
+    ["Layanan", "Services", "服务"],
+    ["Domain", "Domains", "域名"],
+    ["Tagihan", "Invoices", "账单"],
+    ["Bantuan", "Help", "帮助"],
+    ["Pesan baru", "New order", "新订单"],
+    ["Menu akun", "Account menu", "账户菜单"],
+    ["Akun saya", "My account", "我的账户"],
+    ["Akun aktif", "Active account", "当前账户"],
+    ["Halo, Akun saya", "Hello, My account", "你好，我的账户"],
+    ["Halo,", "Hello,", "你好，"],
+    ["Semua beres. Tidak ada tagihan yang belum dibayar.", "All caught up. You have no unpaid invoices.", "一切正常，没有未支付的账单。"],
+    ["Layanan aktif", "Active services", "有效服务"],
+    ["Tagihan belum dibayar", "Unpaid invoices", "未支付账单"],
+    ["Saldo kredit", "Credit balance", "信用余额"],
+    ["Bisa dipakai untuk membayar tagihan", "Can be used to pay invoices", "可用于支付账单"],
+    ["Domain segera habis", "Domains expiring soon", "即将到期的域名"],
+    ["Ringkasan akun", "Account summary", "账户摘要"],
+    ["Belum ada layanan.", "No services yet.", "暂无服务。"],
+    ["Hosting, VPS, email dan SSL yang Anda pesan akan muncul di sini.", "Your hosting, VPS, email, and SSL orders will appear here.", "您订购的主机、VPS、电子邮件和 SSL 将显示在此处。"],
+    ["Pesan layanan", "Order a service", "订购服务"],
+    ["Semua domain aman", "All domains are safe", "所有域名均安全"],
+    ["Tidak ada domain yang habis dalam 45 hari ke depan.", "No domains will expire in the next 45 days.", "未来 45 天内没有域名到期。"],
+    ["Navigasi Client Area", "Client Area navigation", "客户专区导航"],
     ["Email sudah terdaftar.", "This email is already registered.", "该邮箱已注册。"],
     ["Nama, email, dan password wajib diisi.", "Name, email, and password are required.", "姓名、电子邮箱和密码为必填项。"],
     ["Nama maksimal 100 karakter.", "Name must be 100 characters or fewer.", "姓名最多可输入 100 个字符。"],
@@ -361,7 +392,11 @@
     );
     let node;
     while ((node = walker.nextNode())) {
-      if (node.parentElement.closest("script, style, [aria-hidden='true']")) {
+      if (
+        node.parentElement.closest(
+          "script, style, [aria-hidden='true'], [data-user-content]",
+        )
+      ) {
         continue;
       }
       localizeTextNode(node, selectedLanguage);
@@ -401,6 +436,13 @@
         selectedLanguage,
       )}`,
     );
+    document
+      .querySelectorAll("[data-dashboard-language]")
+      .forEach((button) => {
+        const selected =
+          button.dataset.dashboardLanguage === selectedLanguage;
+        button.setAttribute("aria-pressed", String(selected));
+      });
 
     const registerStatusElement = document.getElementById("register-status");
     if (registerStatusElement && registerStatusElement.dataset.sourceMessage) {
@@ -427,6 +469,14 @@
     console.error("Tidak dapat membaca preferensi bahasa:", error);
   }
   applyLanguage(savedLanguage);
+  let savedDashboardTheme = "light";
+  try {
+    savedDashboardTheme =
+      localStorage.getItem("zeixon-dashboard-theme") || "light";
+  } catch (error) {
+    console.error("Tidak dapat membaca preferensi tema:", error);
+  }
+  applyDashboardTheme(savedDashboardTheme);
   languageSelect.addEventListener("change", () => {
     applyLanguage(languageSelect.value);
     try {
@@ -534,7 +584,7 @@
         ) {
           return;
         }
-        showHome();
+        showHome(result.user);
       })
       .catch((error) => {
         if (checkSequence === sessionCheckSequence) {
@@ -545,10 +595,15 @@
 
   function showLogin(on) {
     sessionCheckSequence += 1;
+    client.classList.remove("is-authenticated");
     clientPortal.hidden = on;
     clientLogin.hidden = !on;
     clientHome.hidden = true;
     clientRegister.hidden = true;
+    document.getElementById("dashboard-profile-menu").hidden = true;
+    document
+      .getElementById("dashboard-profile-toggle")
+      .setAttribute("aria-expanded", "false");
     const loginStatus = document.getElementById("login-status");
     loginStatus.hidden = true;
     loginStatus.textContent = "";
@@ -559,12 +614,63 @@
     delete logoutStatus.dataset.sourceMessage;
   }
 
-  function showHome() {
+  function updateDashboardUser(user) {
+    if (!user || typeof user !== "object") return;
+
+    const firstName =
+      typeof user.firstName === "string" ? user.firstName.trim() : "";
+    const lastName =
+      typeof user.lastName === "string" ? user.lastName.trim() : "";
+    const fullName =
+      (typeof user.name === "string" ? user.name.trim() : "") ||
+      `${firstName} ${lastName}`.trim() ||
+      localizedText("Akun saya");
+    const email = typeof user.email === "string" ? user.email : "";
+    const initials = fullName
+      .split(/\s+/)
+      .slice(0, 2)
+      .map((part) => Array.from(part)[0] || "")
+      .join("")
+      .toUpperCase();
+    const currency =
+      typeof user.currency === "string" && user.currency.trim()
+        ? user.currency.trim().toUpperCase()
+        : "IDR";
+
+    document.getElementById("dashboard-user-name").textContent = fullName;
+    document.getElementById("dashboard-greeting-name").textContent = fullName;
+    document.getElementById("dashboard-user-email").textContent = email;
+    document.getElementById("dashboard-account-name").textContent = fullName;
+    document.getElementById("dashboard-avatar").textContent = initials || "ID";
+    document.getElementById("dashboard-menu-avatar").textContent =
+      initials || "ID";
+    document.getElementById("dashboard-currency").textContent = currency;
+    document.getElementById("dashboard-currency-menu").textContent = currency;
+  }
+
+  function applyDashboardTheme(theme) {
+    const selectedTheme = theme === "dark" ? "dark" : "light";
+    clientHome.dataset.theme = selectedTheme;
+    document.querySelectorAll("[data-dashboard-theme]").forEach((button) => {
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.dashboardTheme === selectedTheme),
+      );
+    });
+  }
+
+  function showHome(user) {
     sessionCheckSequence += 1;
+    if (user) updateDashboardUser(user);
     clientPortal.hidden = true;
     clientLogin.hidden = true;
     clientHome.hidden = false;
     clientRegister.hidden = true;
+    client.classList.add("is-authenticated");
+    document.getElementById("dashboard-profile-menu").hidden = true;
+    document
+      .getElementById("dashboard-profile-toggle")
+      .setAttribute("aria-expanded", "false");
     const logoutStatus = document.getElementById("logout-status");
     logoutStatus.hidden = true;
     logoutStatus.textContent = "";
@@ -573,6 +679,7 @@
 
   function showRegister() {
     sessionCheckSequence += 1;
+    client.classList.remove("is-authenticated");
     clientPortal.hidden = true;
     clientLogin.hidden = true;
     clientHome.hidden = true;
@@ -647,6 +754,52 @@
   document.getElementById("register-link").addEventListener("click", showRegister);
   document.getElementById("back-login").addEventListener("click", () => showLogin(true));
   document.getElementById("register-back-portal").addEventListener("click", () => showLogin(false));
+  const profileToggle = document.getElementById("dashboard-profile-toggle");
+  const profileMenu = document.getElementById("dashboard-profile-menu");
+
+  profileToggle.addEventListener("click", () => {
+    const isOpening = profileMenu.hidden;
+    profileMenu.hidden = !isOpening;
+    profileToggle.setAttribute("aria-expanded", String(isOpening));
+  });
+
+  document.querySelectorAll("[data-dashboard-language]").forEach((button) => {
+    button.addEventListener("click", () => {
+      languageSelect.value = button.dataset.dashboardLanguage;
+      languageSelect.dispatchEvent(new Event("change"));
+    });
+  });
+
+  document.querySelectorAll("[data-dashboard-theme]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const theme = button.dataset.dashboardTheme;
+      applyDashboardTheme(theme);
+      try {
+        localStorage.setItem("zeixon-dashboard-theme", theme);
+      } catch (error) {
+        console.error("Tidak dapat menyimpan preferensi tema:", error);
+      }
+    });
+  });
+
+  document.querySelectorAll(".dashboard-nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      document
+        .querySelectorAll(".dashboard-nav a")
+        .forEach((item) => item.classList.toggle("is-active", item === link));
+    });
+  });
+
+  document
+    .querySelectorAll("#dashboard-order, [data-dashboard-order]")
+    .forEach((button) => {
+      button.addEventListener("click", () => {
+        document
+          .getElementById("dashboard-services")
+          .scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    });
+
   document.getElementById("order-btn").addEventListener("click", () => {
     alert(localizedText("Halaman pemesanan domain & hosting akan dibuka di sini."));
   });
@@ -714,7 +867,7 @@
     }
 
     loginForm.reset();
-    showHome();
+    showHome(result.user);
     loginSubmit.disabled = false;
   });
 
@@ -986,11 +1139,13 @@
   document.addEventListener("click", (event) => {
     if (
       event.target.closest(
-        ".nav-item, .login-wrap, .nav-toggle, .mega, .language-picker",
+        ".nav-item, .login-wrap, .nav-toggle, .mega, .language-picker, .dashboard-profile",
       )
     ) {
       return;
     }
+    profileMenu.hidden = true;
+    profileToggle.setAttribute("aria-expanded", "false");
     closeMenus();
     if (!event.target.closest(".navbar")) closeMobile();
   });
@@ -998,13 +1153,18 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       const languageMenuWasOpen = !languageMenu.hidden;
+      const profileMenuWasOpen = !profileMenu.hidden;
+      profileMenu.hidden = true;
+      profileToggle.setAttribute("aria-expanded", "false");
       closeMenus();
       closeMobile();
       if (languageMenuWasOpen) languageToggle.focus();
+      else if (profileMenuWasOpen) profileToggle.focus();
     }
   });
 
   window.addEventListener("hashchange", () => {
+    if (location.hash.startsWith("#dashboard-")) return;
     showClient(location.hash === "#client");
   });
 
